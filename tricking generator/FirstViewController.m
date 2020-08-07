@@ -9,14 +9,20 @@
 #import "FirstViewController.h"
 
 @interface FirstViewController ()
-
+@property MoveManager * manager;
 @end
 
 @implementation FirstViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    AppDelegate* delegateInstance = ( AppDelegate* )[UIApplication sharedApplication].delegate;
+    _manager = [delegateInstance manager];
+}
+
+
+- (IBAction)testButton:(UIButton *)sender {
+    [_manager generate: 1];
 }
 
 

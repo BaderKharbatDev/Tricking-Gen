@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1F0DE924DB90B20059FC9F /* MoveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F0DE824DB90B20059FC9F /* MoveManager.m */; };
 		1E5004E224DB090C006C23A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004E124DB090C006C23A6 /* AppDelegate.m */; };
 		1E5004E524DB090C006C23A6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004E424DB090C006C23A6 /* SceneDelegate.m */; };
 		1E5004E824DB090C006C23A6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004E724DB090C006C23A6 /* FirstViewController.m */; };
@@ -16,9 +17,12 @@
 		1E5004F324DB090C006C23A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E5004F224DB090C006C23A6 /* Assets.xcassets */; };
 		1E5004F624DB090C006C23A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5004F424DB090C006C23A6 /* LaunchScreen.storyboard */; };
 		1E5004F924DB090C006C23A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004F824DB090C006C23A6 /* main.m */; };
+		1E50050224DB0DBC006C23A6 /* Move.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E50050124DB0DBC006C23A6 /* Move.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E1F0DE724DB90B20059FC9F /* MoveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveManager.h; sourceTree = "<group>"; };
+		1E1F0DE824DB90B20059FC9F /* MoveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveManager.m; sourceTree = "<group>"; };
 		1E5004DD24DB090C006C23A6 /* tricking generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tricking generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5004E024DB090C006C23A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E5004E124DB090C006C23A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		1E5004F524DB090C006C23A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E5004F724DB090C006C23A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E5004F824DB090C006C23A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1E50050024DB0DBC006C23A6 /* Move.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Move.h; sourceTree = "<group>"; };
+		1E50050124DB0DBC006C23A6 /* Move.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Move.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,7 @@
 		1E5004DF24DB090C006C23A6 /* tricking generator */ = {
 			isa = PBXGroup;
 			children = (
+				1E5004FF24DB0CA0006C23A6 /* Moves */,
 				1E5004E024DB090C006C23A6 /* AppDelegate.h */,
 				1E5004E124DB090C006C23A6 /* AppDelegate.m */,
 				1E5004E324DB090C006C23A6 /* SceneDelegate.h */,
@@ -82,6 +89,17 @@
 				1E5004EF24DB090C006C23A6 /* tricking_generator.xcdatamodeld */,
 			);
 			path = "tricking generator";
+			sourceTree = "<group>";
+		};
+		1E5004FF24DB0CA0006C23A6 /* Moves */ = {
+			isa = PBXGroup;
+			children = (
+				1E1F0DE724DB90B20059FC9F /* MoveManager.h */,
+				1E1F0DE824DB90B20059FC9F /* MoveManager.m */,
+				1E50050024DB0DBC006C23A6 /* Move.h */,
+				1E50050124DB0DBC006C23A6 /* Move.m */,
+			);
+			path = Moves;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +174,8 @@
 			files = (
 				1E5004EB24DB090C006C23A6 /* SecondViewController.m in Sources */,
 				1E5004E224DB090C006C23A6 /* AppDelegate.m in Sources */,
+				1E1F0DE924DB90B20059FC9F /* MoveManager.m in Sources */,
+				1E50050224DB0DBC006C23A6 /* Move.m in Sources */,
 				1E5004E824DB090C006C23A6 /* FirstViewController.m in Sources */,
 				1E5004F124DB090C006C23A6 /* tricking_generator.xcdatamodeld in Sources */,
 				1E5004F924DB090C006C23A6 /* main.m in Sources */,
@@ -308,7 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SUNSTRIDER.tricking-generator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,7 +345,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "SUNSTRIDER.tricking-generator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

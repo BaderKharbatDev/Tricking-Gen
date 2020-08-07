@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Moves/MoveManager.h"
+#import "AppDelegate.h"
 
 @interface FirstViewController : UIViewController
 
