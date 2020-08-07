@@ -22,7 +22,7 @@
 
 
 - (IBAction)testButton:(UIButton *)sender {
-    [_manager generate: 1];
+    [_manager generate: 5];
 }
 
 
