@@ -16,33 +16,31 @@
         self.moveCatList = [[NSMutableDictionary alloc] init];
         NSMutableArray * normal_kicks = [[NSMutableArray alloc] init];
             {
-                [normal_kicks addObject: [[Move alloc] init:@"Round" : chest_forward :  chest_back ]];
-                [normal_kicks addObject: [[Move alloc] init:@"Hook" : chest_back : chest_forward ]];
-                [normal_kicks addObject: [[Move alloc] init:@"Low Round" : chest_forward : chest_back ]];
-                [normal_kicks addObject: [[Move alloc] init:@"Low Hook" : chest_back : chest_forward ]];
-                [normal_kicks addObject: [[Move alloc] init:@"Touch Down Round" : chest_forward : chest_back ]];
+                [normal_kicks addObject: [[Move alloc] init:@"Round" : chest_forward : chest_back : false : false ]];
+                [normal_kicks addObject: [[Move alloc] init:@"Hook" : chest_back : chest_forward : false : false ]];
+                [normal_kicks addObject: [[Move alloc] init:@"Low Round" : chest_forward : chest_back : false : false]];
+                [normal_kicks addObject: [[Move alloc] init:@"Low Hook" : chest_back : chest_forward : false : false]];
+                [normal_kicks addObject: [[Move alloc] init:@"Touch Down Round" : chest_forward : chest_back : false : true]];
             }
         NSMutableArray * pop_kicks = [[NSMutableArray alloc] init];
             {
-                [pop_kicks addObject: [[Move alloc] init:@"Pop Tornado" : chest_back : chest_back ]];
-                [pop_kicks addObject: [[Move alloc] init:@"Pop 360" : chest_back : chest_back ]];
-                [pop_kicks addObject: [[Move alloc] init:@"Backside 900" : backwards : chest_back ]];
-                [pop_kicks addObject: [[Move alloc] init:@"Pop 720 Hook" : chest_back : chest_forward ]];
+                [pop_kicks addObject: [[Move alloc] init:@"Pop Tornado" : chest_back : chest_back : false : false]];
+                [pop_kicks addObject: [[Move alloc] init:@"Pop 360" : chest_back : chest_back : false : false]];
+                [pop_kicks addObject: [[Move alloc] init:@"Backside 900" : backwards : chest_back : false : false]];
+                [pop_kicks addObject: [[Move alloc] init:@"Pop 720 Hook" : chest_back : chest_forward : false : false]];
             }
         NSMutableArray * cheat_kicks = [[NSMutableArray alloc] init];
             {
-                [cheat_kicks addObject: [[Move alloc] init:@"Tornado" : chest_back : chest_back ]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Parafuso" : chest_back : chest_back ]];
-                [cheat_kicks addObject: [[Move alloc] init:@"540" : chest_back : chest_forward ]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Cheat 720" : chest_back : chest_forward ]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Jack Knife" : chest_back : chest_forward ]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Cheat 900" : chest_back : chest_back ]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Hurricane" : chest_back : chest_forward ]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Tornado" : chest_back : chest_back : false : true]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Parafuso" : chest_back : chest_back : false : false]];
+                [cheat_kicks addObject: [[Move alloc] init:@"540" : chest_back : chest_forward : false : false]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Cheat 720" : chest_back : chest_forward : false : false ]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Jack Knife" : chest_back : chest_forward : false : false ]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Cheat 900" : chest_back : chest_back : false : false]];
             }
         NSMutableArray * swing_kicks = [[NSMutableArray alloc] init];
             {
-                [swing_kicks addObject: [[Move alloc] init:@"Skip Hook" : chest_forward : chest_forward ]];
-//                [swing_kicks addObject: [[Move alloc] init:@"Swing 900" : forwards : chest_back ]];
+                [swing_kicks addObject: [[Move alloc] init:@"Skip Hook" : chest_forward : chest_forward : false : false ]];
             }
         NSMutableArray * flat_spins = [[NSMutableArray alloc] init];
             {
