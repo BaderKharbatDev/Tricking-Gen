@@ -13,6 +13,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (readonly, strong) NSPersistentContainer *persistentContainer;
+@property UIWindow * window;
 @property MoveManager * manager;
 - (void)saveContext;
 
