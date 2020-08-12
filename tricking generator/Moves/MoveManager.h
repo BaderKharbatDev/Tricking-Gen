@@ -9,11 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "Move.h"
 #include <stdlib.h>
+#import "WeightObject.h"
 
 
 @interface MoveManager : NSObject
 -(id)init;
 -(NSMutableArray *)generate: (int) size;
-@property NSMutableDictionary * moveCatList;
+@property NSMutableArray * moveCatList;
 @property NSMutableArray * moveList;
 @end

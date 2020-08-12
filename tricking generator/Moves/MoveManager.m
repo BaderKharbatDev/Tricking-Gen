@@ -13,120 +13,147 @@
 -(id)init {
     self = [super init];
     if(self) {
-        self.moveCatList = [[NSMutableDictionary alloc] init];
+        self.moveCatList = [[NSMutableArray alloc] init];
         NSMutableArray * normal_kicks = [[NSMutableArray alloc] init];
             {
-                [normal_kicks addObject: [[Move alloc] init:@"Round" : chest_forward : chest_back : false : false ]];
-                [normal_kicks addObject: [[Move alloc] init:@"Hook" : chest_back : chest_forward : false : false ]];
-                [normal_kicks addObject: [[Move alloc] init:@"Low Round" : chest_forward : chest_back : false : false]];
-                [normal_kicks addObject: [[Move alloc] init:@"Low Hook" : chest_back : chest_forward : false : false]];
-                [normal_kicks addObject: [[Move alloc] init:@"Touch Down Round" : chest_forward : chest_back : false : true]];
+                [normal_kicks addObject: [[Move alloc] init:@"Round Kick" : chest_forward : chest_back : false : false : false : false]];
+                [normal_kicks addObject: [[Move alloc] init:@"Hook Kick" : chest_back : chest_forward : false : false : false : false]];
+                [normal_kicks addObject: [[Move alloc] init:@"Frontsweep" : chest_forward : chest_back : false : false : false : false]];
+                [normal_kicks addObject: [[Move alloc] init:@"Backsweep" : chest_back : chest_forward : false : false : false : false]];
+                [normal_kicks addObject: [[Move alloc] init:@"Touch Down Round" : chest_forward : chest_back : false : true : true : false]];
             }
         NSMutableArray * pop_kicks = [[NSMutableArray alloc] init];
             {
-                [pop_kicks addObject: [[Move alloc] init:@"Pop Tornado" : chest_back : chest_back : false : false]];
-                [pop_kicks addObject: [[Move alloc] init:@"Pop 360" : chest_back : chest_back : false : false]];
-                [pop_kicks addObject: [[Move alloc] init:@"Backside 900" : backwards : chest_back : false : false]];
-                [pop_kicks addObject: [[Move alloc] init:@"Pop 720 Hook" : chest_back : chest_forward : false : false]];
+                [pop_kicks addObject: [[Move alloc] init:@"Pop Tornado" : chest_back : chest_back : false : false : false : false]];
+                [pop_kicks addObject: [[Move alloc] init:@"Pop 360" : chest_back : chest_back : false : false : false : false]];
+                [pop_kicks addObject: [[Move alloc] init:@"Backside 900" : backwards : chest_back : false : false : false : false]];
+                [pop_kicks addObject: [[Move alloc] init:@"Pop 720 Hook" : chest_back : chest_forward : false : false : false : false]];
             }
         NSMutableArray * cheat_kicks = [[NSMutableArray alloc] init];
             {
-                [cheat_kicks addObject: [[Move alloc] init:@"Tornado" : chest_back : chest_back : false : true]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Parafuso" : chest_back : backwards : false : false]];
-                [cheat_kicks addObject: [[Move alloc] init:@"540" : chest_back : chest_forward : false : false]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Cheat 720" : chest_back : chest_forward : false : false ]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Jack Knife" : chest_back : chest_forward : false : false ]];
-                [cheat_kicks addObject: [[Move alloc] init:@"Cheat 900" : chest_back : chest_back : false : false]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Tornado" : chest_back : chest_back : false : true : false : false]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Parafuso" : chest_back : backwards : false : false : true : false]];
+                [cheat_kicks addObject: [[Move alloc] init:@"540" : chest_back : chest_forward : false : false : false : false]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Cheat 720" : chest_back : chest_forward : false : false : false : false]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Jack Knife" : chest_back : chest_forward : false : false : false : false]];
+                [cheat_kicks addObject: [[Move alloc] init:@"Cheat 900" : chest_back : chest_back : false : false : false : false]];
             }
         NSMutableArray * swing_kicks = [[NSMutableArray alloc] init];
             {
-                [swing_kicks addObject: [[Move alloc] init:@"Skip Hook" : chest_forward : chest_forward : false : false ]];
+                [swing_kicks addObject: [[Move alloc] init:@"Skip Hook" : chest_forward : chest_forward : false : false : false : false]];
             }
         NSMutableArray * flat_spins = [[NSMutableArray alloc] init];
             {
-                [flat_spins addObject: [[Move alloc] init:@"Butterfly Kick" : chest_forward : chest_forward : false : false]];
-                [flat_spins addObject: [[Move alloc] init:@"Butter Knife" : chest_forward : chest_forward : false : false]];
-                [flat_spins addObject: [[Move alloc] init:@"Machine" : chest_back : chest_forward : false : true]];
-                [flat_spins addObject: [[Move alloc] init:@"Spider" : chest_back : chest_forward : false : true]];
+                [flat_spins addObject: [[Move alloc] init:@"Butterfly Kick" : chest_forward : chest_forward : false : false : false : false]];
+                [flat_spins addObject: [[Move alloc] init:@"Butter Knife" : chest_forward : chest_forward : false : false : false : false]];
+                [flat_spins addObject: [[Move alloc] init:@"Machine" : chest_back : chest_forward : false : true : false : false]];
+                [flat_spins addObject: [[Move alloc] init:@"Spider" : chest_back : chest_forward : false : true : false : false]];
             }
         NSMutableArray * flat_twists = [[NSMutableArray alloc] init];
             {
-                [flat_twists addObject: [[Move alloc] init:@"Btwist" : chest_forward : backwards : false : true]];
-                [flat_twists addObject: [[Move alloc] init:@"Btwist Round" : chest_forward : chest_back : false : false ]];
-                [flat_twists addObject: [[Move alloc] init:@"Btwist Hyper Hook" : chest_forward : chest_forward : false : false]];
+                [flat_twists addObject: [[Move alloc] init:@"Btwist" : chest_forward : backwards : false : true : false : false]];
+                [flat_twists addObject: [[Move alloc] init:@"Btwist Round" : chest_forward : chest_back : false : false : false : false]];
+                [flat_twists addObject: [[Move alloc] init:@"Btwist Hyper Hook" : chest_forward : chest_forward : false : false : false : false]];
             }
         NSMutableArray * backward_flips = [[NSMutableArray alloc] init];
             {
-                [backward_flips addObject: [[Move alloc] init:@"Back Hand Spring" : backwards : backwards : false : false]];
-                [backward_flips addObject: [[Move alloc] init:@"Back Tuck" : backwards : backwards : false : false]];
-                [backward_flips addObject: [[Move alloc] init:@"Flash Kick" : backwards : chest_forward : false : false]];
-                [backward_flips addObject: [[Move alloc] init:@"Arabian" : backwards : forwards : false : false]];
-                [backward_flips addObject: [[Move alloc] init:@"Gainer Tuck" : forwards : forwards : true : false]];
-                [backward_flips addObject: [[Move alloc] init:@"Cheat Gainer" : backwards : chest_forward : true : false]];
-                [backward_flips addObject: [[Move alloc] init:@"Gainer Switch" : backwards : backwards : true : true]];
-                [backward_flips addObject: [[Move alloc] init:@"Moon Kick" : backwards : forwards : true : false]];
+                [backward_flips addObject: [[Move alloc] init:@"Back Hand Spring" : backwards : backwards : false : false : true : false]];
+                [backward_flips addObject: [[Move alloc] init:@"Back Tuck" : backwards : backwards : false : false : false : true]];
+                [backward_flips addObject: [[Move alloc] init:@"Flash Kick" : backwards : chest_forward : false : false : false : true]];
+                [backward_flips addObject: [[Move alloc] init:@"Arabian" : backwards : forwards : false : false : false : true]];
+                [backward_flips addObject: [[Move alloc] init:@"Gainer Tuck" : forwards : forwards : true : false : false : false]];
+                [backward_flips addObject: [[Move alloc] init:@"Cheat Gainer" : backwards : chest_forward : true : false : false : false]];
+                [backward_flips addObject: [[Move alloc] init:@"Gainer Switch" : backwards : backwards : true : true : false : false]];
+                [backward_flips addObject: [[Move alloc] init:@"Moon Kick" : backwards : forwards : true : false : false : false]];
             }
         NSMutableArray * backward_twists = [[NSMutableArray alloc] init];
             {
-                [backward_twists addObject: [[Move alloc] init:@"Full" : backwards : backwards : false : false]];
-                [backward_twists addObject: [[Move alloc] init:@"Corkscrew" : backwards : backwards : true : true]];
-                [backward_twists addObject: [[Move alloc] init:@"Boxcutter" : backwards : chest_forward : true : false]];
+                [backward_twists addObject: [[Move alloc] init:@"Full" : backwards : backwards : false : false : false : true]];
+                [backward_twists addObject: [[Move alloc] init:@"Corkscrew" : backwards : backwards : true : true : false : false]];
+                [backward_twists addObject: [[Move alloc] init:@"Boxcutter" : backwards : chest_forward : true : false : false : false]];
             }
         NSMutableArray * forward_flips = [[NSMutableArray alloc] init];
             {
-                [forward_flips addObject: [[Move alloc] init:@"Cart Wheel" : forwards : chest_forward : false : false]];
-                [forward_flips addObject: [[Move alloc] init:@"Dive Roll" : forwards : forwards : false : false]];
-                [forward_flips addObject: [[Move alloc] init:@"Front Handspring" : forwards : forwards : false : false]];
-                [forward_flips addObject: [[Move alloc] init:@"Front Tuck" : forwards : forwards : false : false]];
-                [forward_flips addObject: [[Move alloc] init:@"Russian Front" : forwards : forwards : false : false]];
-                [forward_flips addObject: [[Move alloc] init:@"Webster" : forwards : forwards : false : false]];
+                [forward_flips addObject: [[Move alloc] init:@"Cart Wheel" : forwards : chest_forward : false : false : false : false]];
+                [forward_flips addObject: [[Move alloc] init:@"Dive Roll" : forwards : forwards : false : false : false : false]];
+                [forward_flips addObject: [[Move alloc] init:@"Front Handspring" : forwards : forwards : false : false : true : false]];
+                [forward_flips addObject: [[Move alloc] init:@"Front Tuck" : forwards : forwards : false : false : false : true]];
+                [forward_flips addObject: [[Move alloc] init:@"Webster" : forwards : forwards : false : false : false : false]];
             }
         NSMutableArray * forward_twists = [[NSMutableArray alloc] init];
         {
-            [forward_twists addObject: [[Move alloc] init:@"360 Dive Roll" : forwards : forwards : false : false]];
+            [forward_twists addObject: [[Move alloc] init:@"360 Dive Roll" : forwards : forwards : false : false : false : false]];
         }
         NSMutableArray * outside_flips = [[NSMutableArray alloc] init];
         {
 //            [outside_flips addObject: [[Move alloc] init:@"Dleg" : chest_back : backwards : false : false]];
-            [outside_flips addObject: [[Move alloc] init:@"Gumbi" : chest_forward : backwards : false : true]];
-            [outside_flips addObject: [[Move alloc] init:@"Raiz" : chest_forward : backwards : false : true]];
-            [outside_flips addObject: [[Move alloc] init:@"TDR" : chest_forward : backwards : false : true]];
+            [outside_flips addObject: [[Move alloc] init:@"Gumbi" : chest_forward : backwards : false : true : false : false]];
+            [outside_flips addObject: [[Move alloc] init:@"Raiz" : chest_forward : backwards : false : true : false : false]];
+            [outside_flips addObject: [[Move alloc] init:@"TDR" : chest_forward : backwards : false : true : true : false]];
         }
         NSMutableArray * outside_twists = [[NSMutableArray alloc] init];
         {
-            [outside_twists addObject: [[Move alloc] init:@"Sideswipe" : chest_forward : chest_forward : false : false]];
+            [outside_twists addObject: [[Move alloc] init:@"Sideswipe" : chest_forward : chest_forward : false : false : false : false]];
         }
         NSMutableArray * inside_tricks = [[NSMutableArray alloc] init];
         {
-            [inside_tricks addObject: [[Move alloc] init:@"Sideflip" : chest_forward : chest_forward : false : false]];
-            [inside_tricks addObject: [[Move alloc] init:@"Frisbee" : chest_forward : chest_forward : false : false]];
-            [inside_tricks addObject: [[Move alloc] init:@"Cartwheel" : chest_forward : chest_forward : false : false]];
-            [inside_tricks addObject: [[Move alloc] init:@"Roundoff" : forwards : backwards : false : false]];
-            [inside_tricks addObject: [[Move alloc] init:@"Helicoptero" : chest_forward : forwards : false : false]];
-            [inside_tricks addObject: [[Move alloc] init:@"Aerial" : chest_forward : chest_forward : false : false]];
-            [inside_tricks addObject: [[Move alloc] init:@"Aerial Hook" : chest_forward : chest_forward : false : false]];
-            [inside_tricks addObject: [[Move alloc] init:@"Scoot" : chest_forward : backwards : false : true]];
-            [inside_tricks addObject: [[Move alloc] init:@"Master Scoot" : chest_forward : backwards : false : true]];
+            [inside_tricks addObject: [[Move alloc] init:@"Sideflip" : chest_forward : chest_forward : false : false : false : false]];
+            [inside_tricks addObject: [[Move alloc] init:@"Frisbee" : chest_forward : chest_forward : false : false : false : false]];
+            [inside_tricks addObject: [[Move alloc] init:@"Cartwheel" : chest_forward : chest_forward : false : false : false : false]];
+            [inside_tricks addObject: [[Move alloc] init:@"Roundoff" : forwards : backwards : false : false : true : false]];
+            [inside_tricks addObject: [[Move alloc] init:@"Helicoptero" : chest_forward : forwards : false : false : false : false]];
+            [inside_tricks addObject: [[Move alloc] init:@"Aerial" : chest_forward : chest_forward : false : false : false : false]];
+            [inside_tricks addObject: [[Move alloc] init:@"Aerial Hook" : chest_forward : chest_forward : false : false : false : false]];
+            [inside_tricks addObject: [[Move alloc] init:@"Scoot" : chest_forward : backwards : false : true : true : false]];
+            [inside_tricks addObject: [[Move alloc] init:@"Master Scoot" : chest_forward : backwards : false : true : true : false]];
         }
 
-        [_moveCatList setObject: normal_kicks forKey:@"normal_kicks"];
-        [_moveCatList setObject: pop_kicks forKey:@"pop_kicks"];
-        [_moveCatList setObject: cheat_kicks forKey:@"cheat_kicks"];
-        [_moveCatList setObject: swing_kicks forKey:@"swing_kicks"];
-        [_moveCatList setObject: flat_spins forKey:@"flat_spins"];
-        [_moveCatList setObject: flat_twists forKey:@"flat_twists"];
-        [_moveCatList setObject: backward_flips forKey:@"backward_flips"];
-        [_moveCatList setObject: backward_twists forKey:@"backward_twists"];
-        [_moveCatList setObject: forward_flips forKey:@"forward_flips"];
-        [_moveCatList setObject: forward_twists forKey:@"forward_twists"];
-        [_moveCatList setObject: outside_flips forKey:@"outside_flips"];
-        [_moveCatList setObject: outside_twists forKey:@"outside_twists"];
-        [_moveCatList setObject: inside_tricks forKey:@"inside_tricks"];
+//        [_moveCatList setObject: normal_kicks forKey:@"normal_kicks"];
+//        [_moveCatList setObject: pop_kicks forKey:@"pop_kicks"];
+//        [_moveCatList setObject: cheat_kicks forKey:@"cheat_kicks"];
+//        [_moveCatList setObject: swing_kicks forKey:@"swing_kicks"];
+//        [_moveCatList setObject: flat_spins forKey:@"flat_spins"];
+//        [_moveCatList setObject: flat_twists forKey:@"flat_twists"];
+//        [_moveCatList setObject: backward_flips forKey:@"backward_flips"];
+//        [_moveCatList setObject: backward_twists forKey:@"backward_twists"];
+//        [_moveCatList setObject: forward_flips forKey:@"forward_flips"];
+//        [_moveCatList setObject: forward_twists forKey:@"forward_twists"];
+//        [_moveCatList setObject: outside_flips forKey:@"outside_flips"];
+//        [_moveCatList setObject: outside_twists forKey:@"outside_twists"];
+//        [_moveCatList setObject: inside_tricks forKey:@"inside_tricks"];
+        
+//        [_moveCatList setObject: normal_kicks forKey:@"Normal Kicks"];
+//        [_moveCatList setObject: pop_kicks forKey:@"Pop Kicks"];
+//        [_moveCatList setObject: cheat_kicks forKey:@"Cheat Kicks"];
+//        [_moveCatList setObject: swing_kicks forKey:@"Swing Kicks"];
+//        [_moveCatList setObject: flat_spins forKey:@"Flat Spins"];
+//        [_moveCatList setObject: flat_twists forKey:@"Flat Twists"];
+//        [_moveCatList setObject: backward_flips forKey:@"Backward Flips"];
+//        [_moveCatList setObject: backward_twists forKey:@"Backward Twists"];
+//        [_moveCatList setObject: forward_flips forKey:@"Forward Flips"];
+//        [_moveCatList setObject: forward_twists forKey:@"Forward Twists"];
+//        [_moveCatList setObject: outside_flips forKey:@"Outside Flips"];
+//        [_moveCatList setObject: outside_twists forKey:@"Outside Twists"];
+//        [_moveCatList setObject: inside_tricks forKey:@"Inside Tricks"];
+        
+        [_moveCatList addObject: normal_kicks];
+        [_moveCatList addObject: pop_kicks];
+        [_moveCatList addObject: cheat_kicks];
+        [_moveCatList addObject: swing_kicks];
+        [_moveCatList addObject: flat_spins];
+        [_moveCatList addObject: flat_twists];
+        [_moveCatList addObject: backward_flips];
+        [_moveCatList addObject: backward_twists];
+        [_moveCatList addObject: forward_flips];
+        [_moveCatList addObject: forward_twists];
+        [_moveCatList addObject: outside_flips];
+        [_moveCatList addObject: outside_twists];
+        [_moveCatList addObject: inside_tricks];
         
         self.moveList = [[NSMutableArray alloc] init];
         for(int i = 0; i < self.moveCatList.count; i++) {
-            for(int n = 0; n < [(NSMutableArray *) self.moveCatList.allValues[i] count]; n++) {
-                [_moveList addObject: (Move *) [(NSMutableArray *) self.moveCatList.allValues[i] objectAtIndex:n] ];
+            for(int n = 0; n < [(NSMutableArray *) self.moveCatList[i] count]; n++) {
+                [_moveList addObject: (Move *) [(NSMutableArray *) self.moveCatList[i] objectAtIndex:n] ];
             }
         }
     }
@@ -149,27 +176,62 @@
 -(Move *) getNextMoveHelper: (Move *) old {
     NSMutableArray * temp_move_list = [[NSMutableArray alloc] init];
     NSMutableArray * activeMoveList = [self getActiveMoveList];
-    Move * current;
+    WeightObject * obj;
+    int highestScore = 0;
     for(int i = 0; i < activeMoveList.count; i++) {
-        current = activeMoveList[i];
-        if(old.landing_stance == current.take_off_stance) {
-            if(old.landing_can_swing) { //&& current.take_off_swing) {
-                //swings match add it
-                [temp_move_list addObject: current];
-            } else if (!old.landing_can_swing && !current.take_off_swing) {
-                //not swing landing and not takeoff swing so add it
-                [temp_move_list addObject: current];
-            } else {
-                //dont fucking add it
-            }
+        obj = [[WeightObject alloc] init: 1 : (Move *) activeMoveList[i]];
+        //check for repeating move
+        if(old == obj.move)
+            obj.weight -= 1;
+        
+        //check matching stance
+        if(old.landing_stance == obj.move.take_off_stance)
+            obj.weight += 2;
+            
+        //check compatible stances
+        switch(old.landing_stance) {
+            case chest_forward: //old move ends in chest_forward
+                if(obj.move.take_off_stance == forwards)//forward tricks are compatable
+                    obj.weight += 1;
+                break;
+            case chest_back: //old move ends in chest_forward
+                if(obj.move.take_off_stance == backwards)//forward tricks are compatable
+                    obj.weight += 1;
+                break;
+            case forwards: //old move ends in chest_forward
+                if(obj.move.take_off_stance == chest_back)//forward tricks are compatable
+                    obj.weight += 3;
+                break;
+            case backwards: //old move ends in chest_forward
+                if(obj.move.take_off_stance == chest_forward)//forward tricks are compatable
+                    obj.weight += 1;
+                break;
         }
+        
+        //check swing compatability
+        if(old.landing_can_swing && obj.move.take_off_swing) {
+            obj.weight += 1;
+        } else if (!old.landing_can_swing && !obj.move.take_off_swing) {
+            obj.weight += 1;
+        }
+        
+        //adds the move to moveList
+        [temp_move_list addObject:obj];
+        
+        if(obj.weight > highestScore)
+            highestScore = obj.weight;
     }
     
-//    if(temp_move_list.count == 0)
-//        NSLog(@"%@", old.name);
-//    NSLog(@"%d", temp_move_list.count);
+    //select move
+    NSMutableArray * highestMoves = [[NSMutableArray alloc] init];
+    WeightObject * n;
+    for(int i = 0; i < temp_move_list.count; i++) {
+        n = (WeightObject *) temp_move_list[i];
+        if(n.weight == highestScore)
+            [highestMoves addObject: n.move];
+    }
         
-    return [self randomMove: temp_move_list];
+    return [self randomMove: highestMoves];
 }
 
 -(Move *) randomMove: (NSMutableArray *) array {

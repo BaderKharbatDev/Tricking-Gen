@@ -11,6 +11,8 @@
 @interface FirstViewController () <UITableViewDataSource, UITableViewDelegate>
 @property MoveManager * manager;
 @property (strong, nonatomic) IBOutlet UITableView *table;
+@property (strong, nonatomic) IBOutlet UIStepper *countStepper;
+@property (strong, nonatomic) IBOutlet UILabel *countValue;
 @property NSMutableArray * moveArray;
 @end
 
@@ -21,14 +23,23 @@
     AppDelegate* delegateInstance = ( AppDelegate* )[UIApplication sharedApplication].delegate;
     _manager = [delegateInstance manager];
     _moveArray = [[NSMutableArray alloc] init];
+    
+    
+    self.countStepper.maximumValue = 7;
+    self.countStepper.minimumValue = 1;
+    self.countStepper.value = 4;
+    self.countValue.text = [NSString stringWithFormat: @"%.0f", self.countStepper.value];
+    
 }
 
+- (IBAction)onStepperChange:(UIStepper *) sender {
+    self.countValue.text = [NSString stringWithFormat: @"%.0f", self.countStepper.value];
+}
 
-- (IBAction)testButton:(UIButton *)sender {
-    _moveArray = [_manager generate: 5];
+- (IBAction)testButton:(UIButton *) sender {
+    _moveArray = [_manager generate: self.countStepper.value];
     [self.table reloadData];
 }
-
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier: @"cell"];

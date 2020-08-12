@@ -14,8 +14,8 @@
             filePath = "tricking generator/Moves/MoveManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
             landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,9 +30,9 @@
             filePath = "tricking generator/Moves/MoveManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "-generate:"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "-init"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -46,9 +46,57 @@
             filePath = "tricking generator/Moves/MoveManager.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
-            landmarkName = "-getActiveMoveList"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "-randomMove:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE5E6E8E-2E05-4116-97BD-0D0A31FE1BE4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tricking generator/Moves/MoveManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "-generate:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21BF9A2A-88CC-45E5-ACB7-41FA1002E7CF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tricking generator/Moves/MoveManager.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
+            landmarkName = "-getNextMoveHelper:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A6AA7297-07B8-46D8-9FFE-227A0873D996"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "tricking generator/SecondViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "-setupEditTable"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
