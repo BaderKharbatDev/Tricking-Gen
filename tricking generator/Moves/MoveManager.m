@@ -74,7 +74,7 @@
             }
         NSMutableArray * forward_flips = [[NSMutableArray alloc] init];
             {
-                [forward_flips addObject: [[Move alloc] init:@"Cart Wheel" : forwards : chest_forward : false : false : false : false]];
+                [forward_flips addObject: [[Move alloc] init:@"Gymnast Cart Wheel" : forwards : chest_forward : false : false : false : false]];
                 [forward_flips addObject: [[Move alloc] init:@"Dive Roll" : forwards : forwards : false : false : false : false]];
                 [forward_flips addObject: [[Move alloc] init:@"Front Handspring" : forwards : forwards : false : false : true : false]];
                 [forward_flips addObject: [[Move alloc] init:@"Front Tuck" : forwards : forwards : false : false : false : true]];

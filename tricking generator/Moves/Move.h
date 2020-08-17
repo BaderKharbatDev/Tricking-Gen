@@ -17,6 +17,7 @@ typedef enum {
 
 @interface Move : NSObject
 -(id)init: (NSString *) name : (Stance) take_off : (Stance) landing : (BOOL *) take_off_swing : (BOOL *) landing_swing : (BOOL *) generates_tumbling_momentum : (BOOL *) requires_tumbling_momentum;
++(void) saveActiveStatusForMove: (NSString *) name : (BOOL) status;
 @property NSString* name;
 @property Stance take_off_stance;
 @property Stance landing_stance;

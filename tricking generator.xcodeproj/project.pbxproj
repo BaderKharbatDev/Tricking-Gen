@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1E1F0DE924DB90B20059FC9F /* MoveManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E1F0DE824DB90B20059FC9F /* MoveManager.m */; };
+		1E1FF97824EA12A5005C80BF /* movedata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E1FF97724EA12A5005C80BF /* movedata.plist */; };
 		1E2CEC6624E1D75800ADDF0A /* WeightObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E2CEC6524E1D75800ADDF0A /* WeightObject.m */; };
 		1E5004E224DB090C006C23A6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004E124DB090C006C23A6 /* AppDelegate.m */; };
 		1E5004E524DB090C006C23A6 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004E424DB090C006C23A6 /* SceneDelegate.m */; };
 		1E5004E824DB090C006C23A6 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004E724DB090C006C23A6 /* FirstViewController.m */; };
 		1E5004EB24DB090C006C23A6 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004EA24DB090C006C23A6 /* SecondViewController.m */; };
 		1E5004EE24DB090C006C23A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5004EC24DB090C006C23A6 /* Main.storyboard */; };
-		1E5004F124DB090C006C23A6 /* tricking_generator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004EF24DB090C006C23A6 /* tricking_generator.xcdatamodeld */; };
 		1E5004F324DB090C006C23A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E5004F224DB090C006C23A6 /* Assets.xcassets */; };
 		1E5004F624DB090C006C23A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E5004F424DB090C006C23A6 /* LaunchScreen.storyboard */; };
 		1E5004F924DB090C006C23A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5004F824DB090C006C23A6 /* main.m */; };
@@ -55,6 +55,7 @@
 /* Begin PBXFileReference section */
 		1E1F0DE724DB90B20059FC9F /* MoveManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveManager.h; sourceTree = "<group>"; };
 		1E1F0DE824DB90B20059FC9F /* MoveManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveManager.m; sourceTree = "<group>"; };
+		1E1FF97724EA12A5005C80BF /* movedata.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = movedata.plist; sourceTree = "<group>"; };
 		1E2CEC6424E1D6A100ADDF0A /* WeightObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeightObject.h; sourceTree = "<group>"; };
 		1E2CEC6524E1D75800ADDF0A /* WeightObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeightObject.m; sourceTree = "<group>"; };
 		1E5004DD24DB090C006C23A6 /* tricking generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tricking generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,7 +68,6 @@
 		1E5004E924DB090C006C23A6 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		1E5004EA24DB090C006C23A6 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		1E5004ED24DB090C006C23A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1E5004F024DB090C006C23A6 /* tricking_generator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tricking_generator.xcdatamodel; sourceTree = "<group>"; };
 		1E5004F224DB090C006C23A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E5004F524DB090C006C23A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E5004F724DB090C006C23A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,6 +109,7 @@
 		1EC59DC324E49D9C003F4D78 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		1EC59DC424E49D9C003F4D78 /* DragoWFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DragoWFinal.png; sourceTree = "<group>"; };
 		1EC59DC524E49D9C003F4D78 /* fontlogoblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fontlogoblack.png; sourceTree = "<group>"; };
+		1EC59DE524E5DCC0003F4D78 /* tricking generator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tricking generator-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +128,7 @@
 			children = (
 				1E5004DF24DB090C006C23A6 /* tricking generator */,
 				1E5004DE24DB090C006C23A6 /* Products */,
+				1EC59DE524E5DCC0003F4D78 /* tricking generator-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,7 +159,6 @@
 				1E5004F424DB090C006C23A6 /* LaunchScreen.storyboard */,
 				1E5004F724DB090C006C23A6 /* Info.plist */,
 				1E5004F824DB090C006C23A6 /* main.m */,
-				1E5004EF24DB090C006C23A6 /* tricking_generator.xcdatamodeld */,
 			);
 			path = "tricking generator";
 			sourceTree = "<group>";
@@ -165,6 +166,7 @@
 		1E5004FF24DB0CA0006C23A6 /* Moves */ = {
 			isa = PBXGroup;
 			children = (
+				1E1FF97724EA12A5005C80BF /* movedata.plist */,
 				1E1F0DE724DB90B20059FC9F /* MoveManager.h */,
 				1E1F0DE824DB90B20059FC9F /* MoveManager.m */,
 				1E50050024DB0DBC006C23A6 /* Move.h */,
@@ -255,6 +257,7 @@
 				TargetAttributes = {
 					1E5004DC24DB090C006C23A6 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -290,6 +293,7 @@
 				1EC59DD024E49D9C003F4D78 /* kcickgenicontrans.png in Resources */,
 				1EC59DDC24E49D9C003F4D78 /* unchecked.png in Resources */,
 				1EC59DD424E49D9C003F4D78 /* filter.png in Resources */,
+				1E1FF97824EA12A5005C80BF /* movedata.plist in Resources */,
 				1EC59DCB24E49D9C003F4D78 /* fontlogowhite.png in Resources */,
 				1E5004F324DB090C006C23A6 /* Assets.xcassets in Resources */,
 				1EC59DD624E49D9C003F4D78 /* sliders.png in Resources */,
@@ -331,7 +335,6 @@
 				1E1F0DE924DB90B20059FC9F /* MoveManager.m in Sources */,
 				1E50050224DB0DBC006C23A6 /* Move.m in Sources */,
 				1E5004E824DB090C006C23A6 /* FirstViewController.m in Sources */,
-				1E5004F124DB090C006C23A6 /* tricking_generator.xcdatamodeld in Sources */,
 				1E5004F924DB090C006C23A6 /* main.m in Sources */,
 				1E5004E524DB090C006C23A6 /* SceneDelegate.m in Sources */,
 			);
@@ -409,7 +412,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -461,7 +464,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -473,6 +476,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RX64HPKB3B;
 				INFOPLIST_FILE = "tricking generator/Info.plist";
@@ -481,8 +485,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SUNSTRIDER.tricking-generator";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sun-strider.trickgenerator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tricking generator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -491,6 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RX64HPKB3B;
 				INFOPLIST_FILE = "tricking generator/Info.plist";
@@ -499,8 +507,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SUNSTRIDER.tricking-generator";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sun-strider.trickgenerator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "tricking generator-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -527,19 +537,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		1E5004EF24DB090C006C23A6 /* tricking_generator.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				1E5004F024DB090C006C23A6 /* tricking_generator.xcdatamodel */,
-			);
-			currentVersion = 1E5004F024DB090C006C23A6 /* tricking_generator.xcdatamodel */;
-			path = tricking_generator.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 1E5004D524DB090C006C23A6 /* Project object */;
 }

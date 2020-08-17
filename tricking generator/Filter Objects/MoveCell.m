@@ -32,21 +32,28 @@
 }
 
 -(void)changeActiveStatus {
-    self.move.isActive = !self.move.isActive;
-    if(self.move.isActive)
-        [self.boxButton setImage: [UIImage imageNamed:@"checked"] forState:UIControlStateNormal];
-    else
-        [self.boxButton setImage: [UIImage imageNamed:@"unchecked"] forState:UIControlStateNormal];
+//    self.move.isActive = !self.move.isActive;
+//    if(self.move.isActive)
+//        [self.boxButton setImage: [UIImage imageNamed:@"checked"] forState:UIControlStateNormal];
+//    else
+//        [self.boxButton setImage: [UIImage imageNamed:@"unchecked"] forState:UIControlStateNormal];
+    if(self.move.isActive) {
+        [self makeActiveFalse];
+    } else {
+        [self makeActiveTrue];
+    }
 }
 
 -(void)makeActiveTrue {
     self.move.isActive = true;
     [self.boxButton setImage: [UIImage imageNamed:@"checked"] forState:UIControlStateNormal];
+    [Move saveActiveStatusForMove: self.move.name : YES];
 }
 
 -(void)makeActiveFalse {
     self.move.isActive = false;
     [self.boxButton setImage: [UIImage imageNamed:@"unchecked"] forState:UIControlStateNormal];
+    [Move saveActiveStatusForMove: self.move.name : NO];
 }
 
 @end

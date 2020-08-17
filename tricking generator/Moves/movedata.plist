@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Round Kick</key>
+	<false/>
+	<key>Hook Kick</key>
+	<false/>
+	<key>Frontsweep</key>
+	<false/>
+	<key>Backsweep</key>
+	<false/>
+	<key>Touch Down Round</key>
+	<false/>
+	<key>Pop Tornado</key>
+	<true/>
+	<key>Pop 360</key>
+	<true/>
+	<key>Backside 900</key>
+	<true/>
+	<key>Pop 720 Hook</key>
+	<true/>
+	<key>Tornado</key>
+	<true/>
+	<key>Parafuso</key>
+	<true/>
+	<key>540</key>
+	<true/>
+	<key>Cheat 720</key>
+	<true/>
+	<key>Jack Knife</key>
+	<true/>
+	<key>Cheat 900</key>
+	<true/>
+	<key>Skip Hook</key>
+	<true/>
+	<key>Butterfly Kick</key>
+	<true/>
+	<key>Butter Knife</key>
+	<true/>
+	<key>Machine</key>
+	<true/>
+	<key>Spider</key>
+	<true/>
+	<key>Btwist</key>
+	<true/>
+	<key>Btwist Round</key>
+	<true/>
+	<key>Btwist Hyper Hook</key>
+	<true/>
+	<key>Back Hand Spring</key>
+	<true/>
+	<key>Back Tuck</key>
+	<true/>
+	<key>Flash Kick</key>
+	<true/>
+	<key>Arabian</key>
+	<true/>
+	<key>Gainer Tuck</key>
+	<true/>
+	<key>Cheat Gainer</key>
+	<true/>
+	<key>Gainer Switch</key>
+	<true/>
+	<key>Moon Kick</key>
+	<true/>
+	<key>Full</key>
+	<true/>
+	<key>Corkscrew</key>
+	<true/>
+	<key>Boxcutter</key>
+	<true/>
+	<key>Gymnast Cart Wheel</key>
+	<true/>
+	<key>Dive Roll</key>
+	<true/>
+	<key>Front Handspring</key>
+	<true/>
+	<key>Front Tuck</key>
+	<true/>
+	<key>Webster</key>
+	<true/>
+	<key>360 Dive Roll</key>
+	<true/>
+	<key>Gumbi</key>
+	<true/>
+	<key>Raiz</key>
+	<true/>
+	<key>TDR</key>
+	<true/>
+	<key>Sideswipe</key>
+	<true/>
+	<key>Sideflip</key>
+	<true/>
+	<key>Frisbee</key>
+	<true/>
+	<key>Cartwheel</key>
+	<true/>
+	<key>Roundoff</key>
+	<true/>
+	<key>Helicoptero</key>
+	<true/>
+	<key>Aerial</key>
+	<true/>
+	<key>Aerial Hook</key>
+	<true/>
+	<key>Scoot</key>
+	<true/>
+	<key>Master Scoot</key>
+	<true/>
+</dict>
+</plist>

@@ -13,7 +13,7 @@
 -(id)init: (NSString *) name : (Stance) take_off : (Stance) landing : (BOOL *) take_off_swing : (BOOL *) landing_swing : (BOOL *) generates_tumbling_momentum : (BOOL *) requires_tumbling_momentum {
     self = [super init];
     if(self) {
-        self.isActive = TRUE;
+//        self.isActive = TRUE;
         self.name = name;
         self.take_off_stance = take_off;
         self.landing_stance = landing;
@@ -21,8 +21,44 @@
         self.landing_can_swing = landing_swing;
         self.generates_tumbling_momentum = generates_tumbling_momentum;
         self.requires_tumbling_momentum = requires_tumbling_momentum;
+        self.isActive = [self getActiveStatusForMove: name];
     }
     return self;
+}
+
+-(BOOL) getActiveStatusForMove: (NSString *) name {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"movedata.plist"];
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+    {
+//        NSLog(@".");
+        plistPath = [[NSBundle mainBundle] pathForResource:@"movedata" ofType:@"plist"];
+    }
+
+    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+    int rv = [[dict objectForKey: name] boolValue];
+//    NSLog(@"Move: %@, %d", name, rv);
+    return rv;
+}
+
++(void) saveActiveStatusForMove: (NSString *) name : (BOOL) status {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [paths objectAtIndex:0];
+    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"movedata.plist"];
+
+    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+    {
+        plistPath = [[NSBundle mainBundle] pathForResource:@"movedata" ofType:@"plist"];
+    }
+
+    NSMutableDictionary * dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    [dict setObject: [NSNumber numberWithBool:status] forKey: name];
+    
+//    NSLog(@"Move: %@,  %@", name, [dict objectForKey: name]);
+    
+    [dict writeToFile:plistPath atomically:YES];
 }
 
 @end
