@@ -25,7 +25,7 @@
     _moveArray = [[NSMutableArray alloc] init];
     
     
-    self.countStepper.maximumValue = 7;
+    self.countStepper.maximumValue = 10;
     self.countStepper.minimumValue = 1;
     self.countStepper.value = 4;
     self.countValue.text = [NSString stringWithFormat: @"%.0f", self.countStepper.value];
@@ -38,13 +38,15 @@
 
 - (IBAction)testButton:(UIButton *) sender {
     _moveArray = [_manager generate: self.countStepper.value];
-    [self.table reloadData];
+//    [self.table reloadData];
+    [self.table reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier: @"cell"];
     Move * current = (Move*) [self.moveArray objectAtIndex: indexPath.row];
-    cell.textLabel.text = current.name;
+    cell.textLabel.text = [NSString stringWithFormat: @"%ld. %@", (long)indexPath.row + 1, current.name];
     return cell;
 }
 

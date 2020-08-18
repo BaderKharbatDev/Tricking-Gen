@@ -3,15 +3,15 @@
 <plist version="1.0">
 <dict>
 	<key>Round Kick</key>
-	<false/>
+	<true/>
 	<key>Hook Kick</key>
-	<false/>
+	<true/>
 	<key>Frontsweep</key>
-	<false/>
+	<true/>
 	<key>Backsweep</key>
-	<false/>
+	<true/>
 	<key>Touch Down Round</key>
-	<false/>
+	<true/>
 	<key>Pop Tornado</key>
 	<true/>
 	<key>Pop 360</key>
@@ -70,11 +70,9 @@
 	<true/>
 	<key>Boxcutter</key>
 	<true/>
-	<key>Gymnast Cart Wheel</key>
-	<true/>
 	<key>Dive Roll</key>
 	<true/>
-	<key>Front Handspring</key>
+	<key>Reversao</key>
 	<true/>
 	<key>Front Tuck</key>
 	<true/>

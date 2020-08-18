@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 
 typedef enum {
+    update = 1,
+    get = 2
+} Operation;
+
+typedef enum {
     chest_forward = 1,
     chest_back = 2,
     forwards = 3,
@@ -17,7 +22,7 @@ typedef enum {
 
 @interface Move : NSObject
 -(id)init: (NSString *) name : (Stance) take_off : (Stance) landing : (BOOL *) take_off_swing : (BOOL *) landing_swing : (BOOL *) generates_tumbling_momentum : (BOOL *) requires_tumbling_momentum;
-+(void) saveActiveStatusForMove: (NSString *) name : (BOOL) status;
++(BOOL) propListOperation: (Operation) operation : (Move *) move;
 @property NSString* name;
 @property Stance take_off_stance;
 @property Stance landing_stance;

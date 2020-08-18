@@ -21,44 +21,75 @@
         self.landing_can_swing = landing_swing;
         self.generates_tumbling_momentum = generates_tumbling_momentum;
         self.requires_tumbling_momentum = requires_tumbling_momentum;
-        self.isActive = [self getActiveStatusForMove: name];
+        self.isActive = [Move propListOperation: get : self];
     }
     return self;
 }
 
--(BOOL) getActiveStatusForMove: (NSString *) name {
+//+(BOOL) getActiveStatusForMove: (NSString *) name {
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsPath = [paths objectAtIndex:0];
+//    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"movedata.plist"];
+//
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+//    {
+////        NSLog(@".");
+//        plistPath = [[NSBundle mainBundle] pathForResource:@"movedata" ofType:@"plist"];
+//    }
+//
+//    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
+//    int rv = [[dict objectForKey: name] boolValue];
+////    NSLog(@"Move: %@, %d", name, rv);
+//    return rv;
+//}
+//
+//+(void) saveActiveStatusForMove: (NSString *) name : (BOOL) status {
+//    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
+//    NSString *documentsPath = [paths objectAtIndex:0];
+//    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"movedata.plist"];
+//
+//    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
+//    {
+//        plistPath = [[NSBundle mainBundle] pathForResource:@"movedata" ofType:@"plist"];
+//    }
+//
+//    NSMutableDictionary * dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+//    [dict setObject: [NSNumber numberWithBool:status] forKey: name];
+//
+////    NSLog(@"Move: %@,  %@", name, [dict objectForKey: name]);
+//
+//    [dict writeToFile:plistPath atomically:YES];
+//}
+
++(BOOL) propListOperation: (Operation) operation : (Move *) move {
     NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsPath = [paths objectAtIndex:0];
     NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"movedata.plist"];
-
-    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
-    {
-//        NSLog(@".");
-        plistPath = [[NSBundle mainBundle] pathForResource:@"movedata" ofType:@"plist"];
+    NSFileManager * fileManager = [NSFileManager defaultManager];
+    if(!([fileManager fileExistsAtPath: plistPath])) {
+        NSString * bundlePath = [[NSBundle mainBundle] pathForResource:@"movedata" ofType:@"plist"];
+//        NSError * error = NULL;
+        @try {
+            [fileManager copyItemAtPath:bundlePath toPath:plistPath error: NULL];
+        } @catch (NSException *exception) {
+            NSLog(@"Shit Fucked Up");
+        }
     }
-
-    NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:plistPath];
-    int rv = [[dict objectForKey: name] boolValue];
-//    NSLog(@"Move: %@, %d", name, rv);
+    
+    NSMutableDictionary * pDict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
+    int rv = false;
+    switch(operation) {
+        case get:
+            rv = [[pDict objectForKey: move.name] boolValue];
+            break;
+        case update:
+            [pDict setObject: [NSNumber numberWithBool: move.isActive] forKey: move.name];
+            rv = [[pDict objectForKey: move.name] boolValue];
+            break;
+    }
+    [pDict writeToFile:plistPath atomically:YES];
+    
     return rv;
-}
-
-+(void) saveActiveStatusForMove: (NSString *) name : (BOOL) status {
-    NSArray *paths = NSSearchPathForDirectoriesInDomains (NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsPath = [paths objectAtIndex:0];
-    NSString *plistPath = [documentsPath stringByAppendingPathComponent:@"movedata.plist"];
-
-    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath])
-    {
-        plistPath = [[NSBundle mainBundle] pathForResource:@"movedata" ofType:@"plist"];
-    }
-
-    NSMutableDictionary * dict = [[NSMutableDictionary alloc] initWithContentsOfFile:plistPath];
-    [dict setObject: [NSNumber numberWithBool:status] forKey: name];
-    
-//    NSLog(@"Move: %@,  %@", name, [dict objectForKey: name]);
-    
-    [dict writeToFile:plistPath atomically:YES];
 }
 
 @end

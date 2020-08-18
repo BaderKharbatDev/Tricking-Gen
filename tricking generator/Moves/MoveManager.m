@@ -46,8 +46,8 @@
             {
                 [flat_spins addObject: [[Move alloc] init:@"Butterfly Kick" : chest_forward : chest_forward : false : false : false : false]];
                 [flat_spins addObject: [[Move alloc] init:@"Butter Knife" : chest_forward : chest_forward : false : false : false : false]];
-                [flat_spins addObject: [[Move alloc] init:@"Machine" : chest_back : chest_forward : false : true : false : false]];
-                [flat_spins addObject: [[Move alloc] init:@"Spider" : chest_back : chest_forward : false : true : false : false]];
+                [flat_spins addObject: [[Move alloc] init:@"Machine" : chest_forward : backwards : false : true : false : false]];
+                [flat_spins addObject: [[Move alloc] init:@"Spider" : chest_forward : backwards : false : true : false : false]];
             }
         NSMutableArray * flat_twists = [[NSMutableArray alloc] init];
             {
@@ -74,9 +74,8 @@
             }
         NSMutableArray * forward_flips = [[NSMutableArray alloc] init];
             {
-                [forward_flips addObject: [[Move alloc] init:@"Gymnast Cart Wheel" : forwards : chest_forward : false : false : false : false]];
                 [forward_flips addObject: [[Move alloc] init:@"Dive Roll" : forwards : forwards : false : false : false : false]];
-                [forward_flips addObject: [[Move alloc] init:@"Front Handspring" : forwards : forwards : false : false : true : false]];
+                [forward_flips addObject: [[Move alloc] init:@"Reversao" : forwards : forwards : false : false : true : false]];
                 [forward_flips addObject: [[Move alloc] init:@"Front Tuck" : forwards : forwards : false : false : false : true]];
                 [forward_flips addObject: [[Move alloc] init:@"Webster" : forwards : forwards : false : false : false : false]];
             }
@@ -100,7 +99,7 @@
             [inside_tricks addObject: [[Move alloc] init:@"Sideflip" : chest_forward : chest_forward : false : false : false : false]];
             [inside_tricks addObject: [[Move alloc] init:@"Frisbee" : chest_forward : chest_forward : false : false : false : false]];
             [inside_tricks addObject: [[Move alloc] init:@"Cartwheel" : chest_forward : chest_forward : false : false : false : false]];
-            [inside_tricks addObject: [[Move alloc] init:@"Roundoff" : forwards : backwards : false : false : true : false]];
+//            [inside_tricks addObject: [[Move alloc] init:@"Roundoff" : forwards : backwards : false : false : true : false]];
             [inside_tricks addObject: [[Move alloc] init:@"Helicoptero" : chest_forward : forwards : false : false : false : false]];
             [inside_tricks addObject: [[Move alloc] init:@"Aerial" : chest_forward : chest_forward : false : false : false : false]];
             [inside_tricks addObject: [[Move alloc] init:@"Aerial Hook" : chest_forward : chest_forward : false : false : false : false]];
@@ -225,9 +224,17 @@
     //select move
     NSMutableArray * highestMoves = [[NSMutableArray alloc] init];
     WeightObject * n;
+    //add heighest weighted moves
     for(int i = 0; i < temp_move_list.count; i++) {
         n = (WeightObject *) temp_move_list[i];
         if(n.weight == highestScore)
+            [highestMoves addObject: n.move];
+    }
+    //add second heighest weighted moves for variance
+    int variance = 1;
+    for(int i = 0; i < temp_move_list.count; i++) {
+        n = (WeightObject *) temp_move_list[i];
+        if(n.weight >= highestScore - variance)
             [highestMoves addObject: n.move];
     }
         
