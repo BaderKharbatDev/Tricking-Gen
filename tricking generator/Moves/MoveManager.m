@@ -20,7 +20,7 @@
                 [normal_kicks addObject: [[Move alloc] init:@"Hook Kick" : chest_back : chest_forward : false : false : false : false]];
                 [normal_kicks addObject: [[Move alloc] init:@"Frontsweep" : chest_forward : chest_back : false : false : false : false]];
                 [normal_kicks addObject: [[Move alloc] init:@"Backsweep" : chest_back : chest_forward : false : false : false : false]];
-                [normal_kicks addObject: [[Move alloc] init:@"Touch Down Round" : chest_forward : chest_back : false : true : true : false]];
+                [normal_kicks addObject: [[Move alloc] init:@"Touch Down Round" : chest_forward : chest_back : false : false : true : false]];
             }
         NSMutableArray * pop_kicks = [[NSMutableArray alloc] init];
             {
@@ -185,17 +185,17 @@
         
         //check matching stance
         if(old.landing_stance == obj.move.take_off_stance)
-            obj.weight += 2;
+            obj.weight += 3;
             
         //check compatible stances
         switch(old.landing_stance) {
             case chest_forward: //old move ends in chest_forward
                 if(obj.move.take_off_stance == forwards)//forward tricks are compatable
-                    obj.weight += 1;
+                    obj.weight += 2;
                 break;
             case chest_back: //old move ends in chest_forward
                 if(obj.move.take_off_stance == backwards)//forward tricks are compatable
-                    obj.weight += 1;
+                    obj.weight += 2;
                 break;
             case forwards: //old move ends in chest_forward
                 if(obj.move.take_off_stance == chest_back)//forward tricks are compatable
@@ -203,15 +203,15 @@
                 break;
             case backwards: //old move ends in chest_forward
                 if(obj.move.take_off_stance == chest_forward)//forward tricks are compatable
-                    obj.weight += 1;
+                    obj.weight += 2;
                 break;
         }
         
         //check swing compatability
         if(old.landing_can_swing && obj.move.take_off_swing) {
-            obj.weight += 1;
+            obj.weight += 3;
         } else if (!old.landing_can_swing && !obj.move.take_off_swing) {
-            obj.weight += 1;
+            obj.weight += 3;
         }
         
         //adds the move to moveList
@@ -231,7 +231,7 @@
             [highestMoves addObject: n.move];
     }
     //add second heighest weighted moves for variance
-    int variance = 1;
+    int variance = 0;
     for(int i = 0; i < temp_move_list.count; i++) {
         n = (WeightObject *) temp_move_list[i];
         if(n.weight >= highestScore - variance)

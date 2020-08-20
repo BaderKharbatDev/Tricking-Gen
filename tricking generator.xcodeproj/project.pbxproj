@@ -58,7 +58,7 @@
 		1E1FF97724EA12A5005C80BF /* movedata.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = movedata.plist; sourceTree = "<group>"; };
 		1E2CEC6424E1D6A100ADDF0A /* WeightObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeightObject.h; sourceTree = "<group>"; };
 		1E2CEC6524E1D75800ADDF0A /* WeightObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeightObject.m; sourceTree = "<group>"; };
-		1E5004DD24DB090C006C23A6 /* tricking generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tricking generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E5004DD24DB090C006C23A6 /* Trick Generator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trick Generator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E5004E024DB090C006C23A6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1E5004E124DB090C006C23A6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1E5004E324DB090C006C23A6 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		1E5004DE24DB090C006C23A6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1E5004DD24DB090C006C23A6 /* tricking generator.app */,
+				1E5004DD24DB090C006C23A6 /* Trick Generator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			);
 			name = "tricking generator";
 			productName = "tricking generator";
-			productReference = 1E5004DD24DB090C006C23A6 /* tricking generator.app */;
+			productReference = 1E5004DD24DB090C006C23A6 /* Trick Generator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -478,6 +478,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = RX64HPKB3B;
 				INFOPLIST_FILE = "tricking generator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -486,7 +487,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sun-strider.trickgenerator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Trick Generator";
 				SWIFT_OBJC_BRIDGING_HEADER = "tricking generator-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -500,6 +501,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = RX64HPKB3B;
 				INFOPLIST_FILE = "tricking generator/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -508,7 +510,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sun-strider.trickgenerator";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Trick Generator";
 				SWIFT_OBJC_BRIDGING_HEADER = "tricking generator-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
