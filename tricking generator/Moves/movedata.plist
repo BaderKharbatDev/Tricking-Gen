@@ -2,109 +2,259 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Round Kick</key>
-	<true/>
-	<key>Hook Kick</key>
-	<true/>
-	<key>Frontsweep</key>
-	<true/>
-	<key>Backsweep</key>
-	<true/>
-	<key>Touch Down Round</key>
-	<true/>
-	<key>Pop Tornado</key>
-	<true/>
-	<key>Pop 360</key>
-	<true/>
-	<key>Backside 900</key>
-	<true/>
-	<key>Pop 720 Hook</key>
-	<true/>
-	<key>Tornado</key>
-	<true/>
-	<key>Parafuso</key>
-	<true/>
-	<key>540</key>
-	<true/>
-	<key>Cheat 720</key>
-	<true/>
-	<key>Jack Knife</key>
-	<true/>
-	<key>Cheat 900</key>
-	<true/>
-	<key>Skip Hook</key>
-	<true/>
-	<key>Butterfly Kick</key>
-	<true/>
-	<key>Butter Knife</key>
-	<true/>
-	<key>Machine</key>
-	<true/>
-	<key>Spider</key>
-	<true/>
-	<key>Btwist</key>
-	<true/>
-	<key>Btwist Round</key>
-	<true/>
-	<key>Btwist Hyper Hook</key>
-	<true/>
-	<key>Back Hand Spring</key>
-	<true/>
-	<key>Back Tuck</key>
-	<true/>
-	<key>Flash Kick</key>
-	<true/>
-	<key>Arabian</key>
-	<true/>
-	<key>Gainer Tuck</key>
-	<true/>
-	<key>Cheat Gainer</key>
-	<true/>
-	<key>Gainer Switch</key>
-	<true/>
-	<key>Moon Kick</key>
-	<true/>
-	<key>Full</key>
-	<true/>
-	<key>Corkscrew</key>
-	<true/>
-	<key>Boxcutter</key>
-	<true/>
-	<key>Dive Roll</key>
-	<true/>
-	<key>Reversao</key>
-	<true/>
-	<key>Front Tuck</key>
-	<true/>
-	<key>Webster</key>
-	<true/>
-	<key>360 Dive Roll</key>
-	<true/>
-	<key>Gumbi</key>
-	<true/>
-	<key>Raiz</key>
-	<true/>
-	<key>TDR</key>
-	<true/>
-	<key>Sideswipe</key>
-	<true/>
-	<key>Sideflip</key>
-	<true/>
-	<key>Frisbee</key>
-	<true/>
-	<key>Cartwheel</key>
-	<true/>
-	<key>Roundoff</key>
-	<true/>
-	<key>Helicoptero</key>
-	<true/>
-	<key>Aerial</key>
-	<true/>
-	<key>Aerial Hook</key>
-	<true/>
-	<key>Scoot</key>
-	<true/>
-	<key>Master Scoot</key>
-	<true/>
+	<key>normal_kicks</key>
+	<dict>
+		<key>Round Kick</key>
+		<dict>
+			<key>name</key>
+			<string>Round Kick</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Hook Kick</key>
+		<dict>
+			<key>name</key>
+			<string>Hook Kick</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Frontsweep</key>
+		<dict>
+			<key>name</key>
+			<string>Frontsweep</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Backsweep</key>
+		<dict>
+			<key>name</key>
+			<string>Backsweep</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Touch Down Round</key>
+		<dict>
+			<key>name</key>
+			<string>Touch Down Round</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>pop_kicks</key>
+	<dict>
+		<key>Pop Tornado</key>
+		<dict>
+			<key>name</key>
+			<string>Pop Tornado</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Pop 360</key>
+		<dict>
+			<key>name</key>
+			<string>Pop 360</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Backside 900</key>
+		<dict>
+			<key>name</key>
+			<string>Backside 900</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Pop 720 Hook</key>
+		<dict>
+			<key>name</key>
+			<string>Pop 720 Hook</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>cheat_kicks</key>
+	<dict>
+		<key>Tornado</key>
+		<dict>
+			<key>name</key>
+			<string>Tornado</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<true/>
+		</dict>
+		<key>Parafuso</key>
+		<dict>
+			<key>name</key>
+			<string>Parafuso</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>540</key>
+		<dict>
+			<key>name</key>
+			<string>540</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Cheat 720</key>
+		<dict>
+			<key>name</key>
+			<string>Cheat 720</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Jack Knife</key>
+		<dict>
+			<key>name</key>
+			<string>Jack Knife</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Cheat 900</key>
+		<dict>
+			<key>name</key>
+			<string>Cheat 900</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>2</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>swing_kicks</key>
+	<dict/>
+	<key>flat_spins</key>
+	<dict/>
+	<key>flat_twists</key>
+	<dict/>
+	<key>backward_flips</key>
+	<dict/>
+	<key>backward_twists</key>
+	<dict/>
+	<key>forward_flips</key>
+	<dict/>
+	<key>forward_twists</key>
+	<dict/>
+	<key>outside_flips</key>
+	<dict/>
+	<key>outside_twists</key>
+	<dict/>
+	<key>inside_tricks</key>
+	<dict/>
 </dict>
 </plist>
