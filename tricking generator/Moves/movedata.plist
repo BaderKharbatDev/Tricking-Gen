@@ -237,17 +237,413 @@
 		</dict>
 	</dict>
 	<key>swing_kicks</key>
-	<dict/>
+	<dict>
+		<key>Skip Hook</key>
+		<dict>
+			<key>name</key>
+			<string>Skip Hook</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>flat_spins</key>
-	<dict/>
+	<dict>
+		<key>Butterfly Kick</key>
+		<dict>
+			<key>name</key>
+			<string>Butterfly Kick</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Machine</key>
+		<dict>
+			<key>name</key>
+			<string>Machine</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<true/>
+		</dict>
+		<key>Spider</key>
+		<dict>
+			<key>name</key>
+			<string>Spider</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<true/>
+		</dict>
+	</dict>
 	<key>flat_twists</key>
-	<dict/>
+	<dict>
+		<key>Btwist</key>
+		<dict>
+			<key>name</key>
+			<string>Btwist</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<true/>
+		</dict>
+		<key>Btwist Round</key>
+		<dict>
+			<key>name</key>
+			<string>Btwist Round</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>2</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Btwist Hyper Hook</key>
+		<dict>
+			<key>name</key>
+			<string>Btwist Hyper Hook</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>backward_flips</key>
-	<dict/>
+	<dict>
+		<key>Back Hand Spring</key>
+		<dict>
+			<key>name</key>
+			<string>Back Hand Spring</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Back Tuck</key>
+		<dict>
+			<key>name</key>
+			<string>Back Tuck</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Flash Kick</key>
+		<dict>
+			<key>name</key>
+			<string>Flash Kick</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Arabian</key>
+		<dict>
+			<key>name</key>
+			<string>Arabian</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>3</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Cheat Gainer</key>
+		<dict>
+			<key>name</key>
+			<string>Cheat Gainer</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<true/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Gainer Switch</key>
+		<dict>
+			<key>name</key>
+			<string>Gainer Switch</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<true/>
+			<key>can_swing_on_landing</key>
+			<true/>
+		</dict>
+		<key>Moon Kick</key>
+		<dict>
+			<key>name</key>
+			<string>Moon Kick</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>3</integer>
+			<key>requires_swing</key>
+			<true/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>backward_twists</key>
-	<dict/>
+	<dict>
+		<key>Cart Full</key>
+		<dict>
+			<key>name</key>
+			<string>Cart Full</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<true/>
+		</dict>
+		<key>Cart Full Hyper Hook</key>
+		<dict>
+			<key>name</key>
+			<string>Cart Full</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Full</key>
+		<dict>
+			<key>name</key>
+			<string>Full</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Corkscrew</key>
+		<dict>
+			<key>name</key>
+			<string>Corkscrew</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<true/>
+			<key>can_swing_on_landing</key>
+			<true/>
+		</dict>
+		<key>Boxcutter</key>
+		<dict>
+			<key>name</key>
+			<string>Boxcutter</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>4</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<true/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>forward_flips</key>
-	<dict/>
+	<dict>
+		<key>Dive Roll</key>
+		<dict>
+			<key>name</key>
+			<string>Dive Roll</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>3</integer>
+			<key>landing_stance</key>
+			<integer>3</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Reversao</key>
+		<dict>
+			<key>name</key>
+			<string>Reversao</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>3</integer>
+			<key>landing_stance</key>
+			<integer>3</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Front Tuck</key>
+		<dict>
+			<key>name</key>
+			<string>Front Tuck</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>3</integer>
+			<key>landing_stance</key>
+			<integer>3</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Webster</key>
+		<dict>
+			<key>name</key>
+			<string>Dive Roll</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>3</integer>
+			<key>landing_stance</key>
+			<integer>3</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Cart Front</key>
+		<dict>
+			<key>name</key>
+			<string>Cart Front</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>3</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Round Off</key>
+		<dict>
+			<key>name</key>
+			<string>Round Off</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>3</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+		<key>Gymnast Cartwheel</key>
+		<dict>
+			<key>name</key>
+			<string>Gymnast Cartwheel</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>3</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>forward_twists</key>
 	<dict/>
 	<key>outside_flips</key>
