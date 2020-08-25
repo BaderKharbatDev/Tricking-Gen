@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property (strong, nonatomic) IBOutlet UIStepper *countStepper;
 @property (strong, nonatomic) IBOutlet UILabel *countValue;
+@property (strong, nonatomic) IBOutlet UIView *warningWindow;
 @property NSMutableArray * moveArray;
 @end
 
@@ -37,10 +38,27 @@
 }
 
 - (IBAction)testButton:(UIButton *) sender {
-    _moveArray = [_manager generate: self.countStepper.value];
-//    [self.table reloadData];
-    [self.table reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    @try {
+        _moveArray = [_manager generate: self.countStepper.value];
+        [self.table reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
+    } @catch (NSException *exception) {
+        [self displayWarningWindow];
+    }
+}
 
+-(void) displayWarningWindow {
+    //add window
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView * blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.alpha = 0.5f;
+    blurEffectView.frame = self.view.frame;
+    [self.view addSubview:blurEffectView];
+    [self.view addSubview: self.warningWindow];
+    self.warningWindow.center = self.view.center;
+}
+- (IBAction)warningWindowDismissed:(UIButton *)sender {
+    [self.warningWindow removeFromSuperview];
+    [self.view.subviews[self.view.subviews.count - 1] removeFromSuperview];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

@@ -174,9 +174,59 @@
                         <outlet property="countStepper" destination="QaH-YB-igC" id="wFP-WA-2Ux"/>
                         <outlet property="countValue" destination="FVv-jA-Pvv" id="Lq6-bh-ide"/>
                         <outlet property="table" destination="u05-Mh-IHn" id="uXj-dC-t2b"/>
+                        <outlet property="warningWindow" destination="zTs-90-97S" id="gL0-9f-5SF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="zTs-90-97S">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="155"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p8H-Rg-KSs">
+                            <rect key="frame" x="104" y="115" width="32" height="30"/>
+                            <state key="normal" title="Cool"/>
+                            <connections>
+                                <action selector="warningWindowDismissed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hRb-oV-OLv"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Moves in the Edit Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7P-bW-Ng3">
+                            <rect key="frame" x="17" y="87" width="206" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try Enabling a Couple" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqd-3z-ioV">
+                            <rect key="frame" x="42.5" y="61" width="155" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="error.png" translatesAutoresizingMaskIntoConstraints="NO" id="lMx-re-7lD">
+                            <rect key="frame" x="96" y="5" width="48" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="48" id="ODK-v6-Wue"/>
+                                <constraint firstAttribute="height" constant="48" id="VcI-cK-ajJ"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="pqd-3z-ioV" firstAttribute="centerX" secondItem="CJm-ld-E9u" secondAttribute="centerX" id="1in-5Q-mlg"/>
+                        <constraint firstItem="pqd-3z-ioV" firstAttribute="top" secondItem="lMx-re-7lD" secondAttribute="bottom" constant="8" id="44V-ys-l7W"/>
+                        <constraint firstItem="p8H-Rg-KSs" firstAttribute="centerX" secondItem="CJm-ld-E9u" secondAttribute="centerX" id="DQR-a9-Zp1"/>
+                        <constraint firstItem="D7P-bW-Ng3" firstAttribute="top" secondItem="pqd-3z-ioV" secondAttribute="bottom" constant="8" id="LVf-TT-v4R"/>
+                        <constraint firstItem="p8H-Rg-KSs" firstAttribute="top" secondItem="D7P-bW-Ng3" secondAttribute="bottom" constant="10" id="enQ-ho-3PM"/>
+                        <constraint firstItem="CJm-ld-E9u" firstAttribute="bottom" secondItem="p8H-Rg-KSs" secondAttribute="bottom" constant="10" id="fyN-dT-OIk"/>
+                        <constraint firstItem="D7P-bW-Ng3" firstAttribute="centerX" secondItem="CJm-ld-E9u" secondAttribute="centerX" id="jnF-pI-CAf"/>
+                        <constraint firstItem="lMx-re-7lD" firstAttribute="centerX" secondItem="CJm-ld-E9u" secondAttribute="centerX" id="vsb-hC-yxa"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="CJm-ld-E9u"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
@@ -422,6 +472,7 @@
         <image name="DragoW2Final.png" width="1080" height="936"/>
         <image name="arrowright.png" width="50" height="50"/>
         <image name="checked.png" width="50" height="50"/>
+        <image name="error.png" width="48" height="48"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>

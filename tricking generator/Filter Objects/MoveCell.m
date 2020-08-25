@@ -48,14 +48,14 @@
     self.move.isActive = true;
     [self.boxButton setImage: [UIImage imageNamed:@"checked"] forState:UIControlStateNormal];
 //    [Move saveActiveStatusForMove: self.move.name : YES];
-    [Move propListOperation: update : self.move];
+    [Move propListGetMove: update : self.move.name ];
 }
 
 -(void)makeActiveFalse {
     self.move.isActive = false;
     [self.boxButton setImage: [UIImage imageNamed:@"unchecked"] forState:UIControlStateNormal];
 //    [Move saveActiveStatusForMove: self.move.name : NO];
-    [Move propListOperation: update : self.move];
+    [Move propListGetMove: update : self.move.name ];
 }
 
 @end
