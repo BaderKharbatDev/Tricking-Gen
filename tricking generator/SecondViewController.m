@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property NSMutableArray * editHeaderArray;
 @property NSMutableArray * editActualArray;
+
+//styling
+
 @end
 
 @implementation SecondViewController
@@ -29,25 +32,13 @@
     _manager = [delegateInstance manager];
     
     [self setupEditTable];
+    
+    self.table.clipsToBounds = true;
+    self.table.layer.cornerRadius = 10;
+    [self.table.layer setMaskedCorners: kCALayerMaxXMaxYCorner | kCALayerMinXMaxYCorner ];
 }
 
-
 //---------------MODAL POP UP METHODS------------------------------------------
-
-//-(void) displayWarningWindow {
-//    //add window
-//    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
-//    UIVisualEffectView * blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-//    blurEffectView.alpha = 0.5f;
-//    blurEffectView.frame = self.view.frame;
-//    [self.view addSubview:blurEffectView];
-//    [self.view addSubview: self.warningWindow];
-//    self.warningWindow.center = self.view.center;
-//}
-//- (IBAction)warningWindowDismissed:(UIButton *)sender {
-//    [self.warningWindow removeFromSuperview];
-//    [self.view.subviews[self.view.subviews.count - 1] removeFromSuperview];
-//}
 
 - (IBAction)didDropDownPressed:(UIButton *)sender forEvent:(UIEvent *)event{
     int index = 0;
@@ -98,20 +89,6 @@
     self.table.allowsSelection = false;
     
     _editHeaderArray = [[NSMutableArray alloc] init];
-//    CellMenuItem * normal_kicks_Header;
-//    CellMenuItem * pop_kicks_Header;
-//    CellMenuItem * cheat_kicks_Header;
-//    CellMenuItem * swing_kicks_Header;
-//    CellMenuItem * flat_spin_Header;
-//    CellMenuItem * flat_twist_Header;
-//    CellMenuItem * backwards_flips_Header;
-//    CellMenuItem * backwards_twists_Header;
-//    CellMenuItem * forward_flips_Header;
-//    CellMenuItem * forward_twists_Header;
-//    CellMenuItem * outside_flips_Header;
-//    CellMenuItem * outside_twists_Header;
-//    CellMenuItem * inside_tricks;
-//    self.editHeaderArray = @[normal_kicks_Header, pop_kicks_Header, cheat_kicks_Header, swing_kicks_Header, flat_spin_Header, flat_twist_Header, backwards_flips_Header, backwards_twists_Header, forward_flips_Header, forward_twists_Header, outside_flips_Header, outside_twists_Header, inside_tricks];
     
     NSArray * headerNames = @[@"Basic Kicks",@"Pop Kicks",@"Cheat Kicks",@"Swing Kicks",@"Flat Tricks",@"Flat Twists",@"Backwards Flips",@"Backwards Twists",@"Forward Flips", @"Forward Twists", @"Outside Flips",@" Outside Twists",@"Inside Tricks"];
     

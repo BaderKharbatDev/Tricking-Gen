@@ -41,7 +41,7 @@
     }
     
     //update label
-    self.activeCountLabel.text = [NSString stringWithFormat:@"%d/%lu Active", total, (unsigned long)self.moveCellArray.count];
+    self.activeCountLabel.text = [NSString stringWithFormat:@"%d/%lu", total, (unsigned long)self.moveCellArray.count];
     [self updateCheckBoxImg:total];
 }
 

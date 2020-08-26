@@ -82,21 +82,6 @@
 	</dict>
 	<key>pop_kicks</key>
 	<dict>
-		<key>Pop Tornado</key>
-		<dict>
-			<key>name</key>
-			<string>Pop Tornado</string>
-			<key>isActive</key>
-			<true/>
-			<key>take_off_stance</key>
-			<integer>2</integer>
-			<key>landing_stance</key>
-			<integer>2</integer>
-			<key>requires_swing</key>
-			<false/>
-			<key>can_swing_on_landing</key>
-			<false/>
-		</dict>
 		<key>Pop 360</key>
 		<dict>
 			<key>name</key>
@@ -238,10 +223,10 @@
 	</dict>
 	<key>swing_kicks</key>
 	<dict>
-		<key>Skip Hook</key>
+		<key>Swing Hook</key>
 		<dict>
 			<key>name</key>
-			<string>Skip Hook</string>
+			<string>Swing Hook</string>
 			<key>isActive</key>
 			<true/>
 			<key>take_off_stance</key>
