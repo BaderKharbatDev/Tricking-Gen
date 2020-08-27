@@ -14,6 +14,8 @@
 @property (strong, nonatomic) IBOutlet UIStepper *countStepper;
 @property (strong, nonatomic) IBOutlet UILabel *countValue;
 @property (strong, nonatomic) IBOutlet UIView *warningWindow;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *comboMode;
+
 @property NSMutableArray * moveArray;
 @end
 
@@ -27,8 +29,8 @@
     
     
     self.countStepper.maximumValue = 10;
-    self.countStepper.minimumValue = 1;
-    self.countStepper.value = 4;
+    self.countStepper.minimumValue = 3;
+    self.countStepper.value = 3;
     self.countValue.text = [NSString stringWithFormat: @"%.0f", self.countStepper.value];
     
 }
@@ -39,7 +41,11 @@
 
 - (IBAction)testButton:(UIButton *) sender {
     @try {
-        _moveArray = [_manager generate: self.countStepper.value];
+        if(self.comboMode.selectedSegmentIndex == 0) {
+            _moveArray = [_manager generateCreative: self.countStepper.value];
+        } else {
+            _moveArray = [_manager generateStructured: self.countStepper.value];
+        }
         [self.table reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     } @catch (NSException *exception) {
         [self displayWarningWindow];

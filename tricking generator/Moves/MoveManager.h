@@ -14,7 +14,8 @@
 
 @interface MoveManager : NSObject
 -(id)init;
--(NSMutableArray *)generate: (int) size;
+-(NSMutableArray *)generateCreative: (int) size;
+-(NSMutableArray *)generateStructured: (int) size;
 @property NSMutableArray * moveCatList;
 @property NSMutableArray * moveList;
 @end

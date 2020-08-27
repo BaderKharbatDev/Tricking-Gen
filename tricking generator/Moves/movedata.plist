@@ -18,6 +18,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Hook Kick</key>
 		<dict>
@@ -33,6 +35,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Frontsweep</key>
 		<dict>
@@ -48,6 +52,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Backsweep</key>
 		<dict>
@@ -63,6 +69,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Touch Down Round</key>
 		<dict>
@@ -78,6 +86,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>pop_kicks</key>
@@ -96,6 +106,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Backside 900</key>
 		<dict>
@@ -111,6 +123,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Pop 720 Hook</key>
 		<dict>
@@ -126,6 +140,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>cheat_kicks</key>
@@ -144,6 +160,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Parafuso</key>
 		<dict>
@@ -159,6 +177,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>540</key>
 		<dict>
@@ -174,6 +194,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Cheat 720</key>
 		<dict>
@@ -189,6 +211,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Jack Knife</key>
 		<dict>
@@ -204,6 +228,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>2</integer>
 		</dict>
 		<key>Cheat 900</key>
 		<dict>
@@ -219,6 +245,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>swing_kicks</key>
@@ -237,6 +265,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>flat_spins</key>
@@ -255,6 +285,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Machine</key>
 		<dict>
@@ -270,6 +302,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Spider</key>
 		<dict>
@@ -285,6 +319,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>flat_twists</key>
@@ -303,6 +339,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Btwist Round</key>
 		<dict>
@@ -318,6 +356,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Btwist Hyper Hook</key>
 		<dict>
@@ -333,6 +373,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>backward_flips</key>
@@ -351,6 +393,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Back Tuck</key>
 		<dict>
@@ -366,6 +410,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Flash Kick</key>
 		<dict>
@@ -381,6 +427,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Arabian</key>
 		<dict>
@@ -396,6 +444,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Cheat Gainer</key>
 		<dict>
@@ -411,6 +461,8 @@
 			<true/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Gainer Switch</key>
 		<dict>
@@ -426,6 +478,8 @@
 			<true/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Moon Kick</key>
 		<dict>
@@ -441,6 +495,8 @@
 			<true/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>backward_twists</key>
@@ -459,6 +515,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>2</integer>
 		</dict>
 		<key>Cart Full Hyper Hook</key>
 		<dict>
@@ -474,6 +532,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>2</integer>
 		</dict>
 		<key>Full</key>
 		<dict>
@@ -489,6 +549,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>2</integer>
 		</dict>
 		<key>Corkscrew</key>
 		<dict>
@@ -504,6 +566,8 @@
 			<true/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>2</integer>
 		</dict>
 		<key>Boxcutter</key>
 		<dict>
@@ -519,6 +583,8 @@
 			<true/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>2</integer>
 		</dict>
 	</dict>
 	<key>forward_flips</key>
@@ -537,6 +603,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Reversao</key>
 		<dict>
@@ -552,6 +620,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Front Tuck</key>
 		<dict>
@@ -567,6 +637,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Webster</key>
 		<dict>
@@ -582,6 +654,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Cart Front</key>
 		<dict>
@@ -597,6 +671,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Round Off</key>
 		<dict>
@@ -612,6 +688,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Gymnast Cartwheel</key>
 		<dict>
@@ -627,6 +705,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>forward_twists</key>
@@ -645,6 +725,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>A-twist</key>
 		<dict>
@@ -660,10 +742,29 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>outside_flips</key>
 	<dict>
+		<key>Dleg</key>
+		<dict>
+			<key>name</key>
+			<string>Dleg</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
+		</dict>
 		<key>Gumbi</key>
 		<dict>
 			<key>name</key>
@@ -678,6 +779,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Raiz</key>
 		<dict>
@@ -693,6 +796,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>TDR</key>
 		<dict>
@@ -708,10 +813,29 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>outside_twists</key>
 	<dict>
+		<key>Snapu</key>
+		<dict>
+			<key>name</key>
+			<string>Snapu</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>1</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+			<key>finisherStatus</key>
+			<integer>2</integer>
+		</dict>
 		<key>Sideswipe</key>
 		<dict>
 			<key>name</key>
@@ -726,6 +850,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>inside_tricks</key>
@@ -744,6 +870,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
 		</dict>
 		<key>Frisbee</key>
 		<dict>
@@ -759,6 +887,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Cartwheel</key>
 		<dict>
@@ -774,6 +904,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Helicoptero</key>
 		<dict>
@@ -789,6 +921,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Aerial</key>
 		<dict>
@@ -804,6 +938,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Aerial Hook</key>
 		<dict>
@@ -819,6 +955,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<false/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Scoot</key>
 		<dict>
@@ -834,6 +972,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 		<key>Master Scoot</key>
 		<dict>
@@ -849,6 +989,8 @@
 			<false/>
 			<key>can_swing_on_landing</key>
 			<true/>
+			<key>finisherStatus</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </dict>

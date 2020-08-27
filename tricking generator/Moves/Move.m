@@ -20,6 +20,7 @@
         self.take_off_swing = [[moveDict valueForKey: @"requires_swing"] boolValue];
         self.landing_can_swing = [[moveDict valueForKey: @"can_swing_on_landing"] boolValue];
         self.isActive = [[moveDict valueForKey: @"isActive"] boolValue];
+        self.finishStatus = [[moveDict valueForKey: @"finisherStatus"] intValue];
     }
     return self;
 }
