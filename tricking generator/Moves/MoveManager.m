@@ -80,7 +80,7 @@
     Move * current;
     for(int i = 0; i < self.moveList.count; i++) {
         current = (Move *) self.moveList[i];
-        if(current.finishStatus > n) {
+        if(current.isActive && current.finishStatus > n) {
             n = current.finishStatus;
         }
     }
@@ -88,7 +88,7 @@
     NSMutableArray * highestMoves = [[NSMutableArray alloc] init];
     for(int i = 0; i < self.moveList.count; i++) {
         current = (Move *) self.moveList[i];
-        if(current.finishStatus == n)
+        if(current.isActive && current.finishStatus == n)
             [highestMoves addObject: current];
     }
     current = [self randomMove: highestMoves];

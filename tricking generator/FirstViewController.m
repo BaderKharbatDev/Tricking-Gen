@@ -15,8 +15,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *countValue;
 @property (strong, nonatomic) IBOutlet UIView *warningWindow;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *comboMode;
-
 @property NSMutableArray * moveArray;
+
+//styling
+@property (strong, nonatomic) IBOutlet UIView *dropdownView;
+@property (strong, nonatomic) IBOutlet UIView *largerMenuView;
+
 @end
 
 @implementation FirstViewController
@@ -31,12 +35,33 @@
     self.countStepper.maximumValue = 10;
     self.countStepper.minimumValue = 3;
     self.countStepper.value = 3;
-    self.countValue.text = [NSString stringWithFormat: @"%.0f", self.countStepper.value];
+    self.countValue.text = [NSString stringWithFormat: @"Number of Moves:  %.0f", self.countStepper.value];
     
+    
+    //setup dropdown shit
+    [self openMenuView: false];
+}
+
+-(void) openMenuView: (BOOL *) isOpen {
+//    if(isOpen) {
+//        CGRect newFrame = CGRectMake( self.largerMenuView.frame.origin.x, self.largerMenuView.frame.origin.y, 350, 260);
+//        [self.largerMenuView setFrame: newFrame];
+//          [self.dropdownView setHidden:true];
+//    } else {
+        [self.dropdownView setHidden:true];
+        [UIView animateWithDuration:0.5f animations:^{
+            CGRect newFrame = CGRectMake( self.largerMenuView.frame.origin.x, self.largerMenuView.frame.origin.y, 350, 210);
+//            [self.largerMenuView setFrame: newFrame];
+//            [self.largerMenuView]
+            [self.view layoutIfNeeded];
+            [self.largerMenuView layoutIfNeeded];
+        }];
+//    }
+    [self.view layoutIfNeeded];
 }
 
 - (IBAction)onStepperChange:(UIStepper *) sender {
-    self.countValue.text = [NSString stringWithFormat: @"%.0f", self.countStepper.value];
+    self.countValue.text = [NSString stringWithFormat: @"Number of Moves:  %.0f", self.countStepper.value];
 }
 
 - (IBAction)testButton:(UIButton *) sender {
@@ -51,6 +76,11 @@
         [self displayWarningWindow];
     }
 }
+
+- (IBAction)onSlideChange:(UISegmentedControl *)sender {
+    
+}
+
 
 -(void) displayWarningWindow {
     //add window
