@@ -31,4 +31,5 @@ typedef enum {
 @property BOOL landing_can_swing; //is it possible to swing out of it
 @property BOOL isActive;
 @property NSInteger finishStatus;
+
 @end

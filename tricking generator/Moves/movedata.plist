@@ -163,23 +163,6 @@
 			<key>finisherStatus</key>
 			<integer>0</integer>
 		</dict>
-		<key>Parafuso</key>
-		<dict>
-			<key>name</key>
-			<string>Parafuso</string>
-			<key>isActive</key>
-			<true/>
-			<key>take_off_stance</key>
-			<integer>2</integer>
-			<key>landing_stance</key>
-			<integer>4</integer>
-			<key>requires_swing</key>
-			<false/>
-			<key>can_swing_on_landing</key>
-			<false/>
-			<key>finisherStatus</key>
-			<integer>1</integer>
-		</dict>
 		<key>540</key>
 		<dict>
 			<key>name</key>
@@ -748,6 +731,23 @@
 	</dict>
 	<key>outside_flips</key>
 	<dict>
+		<key>Parafuso</key>
+		<dict>
+			<key>name</key>
+			<string>Parafuso</string>
+			<key>isActive</key>
+			<true/>
+			<key>take_off_stance</key>
+			<integer>1</integer>
+			<key>landing_stance</key>
+			<integer>4</integer>
+			<key>requires_swing</key>
+			<false/>
+			<key>can_swing_on_landing</key>
+			<false/>
+			<key>finisherStatus</key>
+			<integer>1</integer>
+		</dict>
 		<key>Dleg</key>
 		<dict>
 			<key>name</key>

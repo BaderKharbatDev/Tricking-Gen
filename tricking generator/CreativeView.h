@@ -10,7 +10,7 @@
 #import "Moves/MoveManager.h"
 #import "AppDelegate.h"
 
-@interface FirstViewController : UIViewController
+@interface CreativeViewController : UIViewController
 
 
 @end

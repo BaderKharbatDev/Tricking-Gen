@@ -6,14 +6,14 @@
 //  Copyright © 2020 SUNSTRIDER. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "FilterView.h"
 #import "MoveManager.h"
 #import "AppDelegate.h"
 #import "CellMenuItem.h"
 #import "HeaderCell.h"
 #import "MoveCell.h"
 
-@interface SecondViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface FilterView () <UITableViewDataSource, UITableViewDelegate>
 @property MoveManager * manager;
 @property (strong, nonatomic) IBOutlet UITableView *table;
 @property NSMutableArray * editHeaderArray;
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation SecondViewController
+@implementation FilterView
 
 - (void)viewDidLoad {
     [super viewDidLoad];

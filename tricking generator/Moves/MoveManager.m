@@ -57,190 +57,15 @@
     }
     return self;
 }
-//-----------------------------------------------------------Structured Generation----------------------------------
+//-----------------------Structured Generation-----------------------------
 -(NSMutableArray *)generateStructured: (int) size {
     NSMutableArray * rv = [[NSMutableArray alloc] init];
-    
-    //get finisher move
-    Move * current = [self getRandomFinishingMove];
-    [rv addObject: current];
-    
-    for(int i = 0; i < size - 2; i++) {
-        current = [self getPreviousMoveHelper: current];
-        [rv insertObject: current atIndex: 0]; //inserts gen move at begining of array
-    }
-    [rv insertObject: [self getStartingMoveHelper: current] atIndex: 0];
-    
-    [self printMoveArray: rv];
     return rv;
 }
 
--(Move *) getRandomFinishingMove {
-    NSInteger n = 0;
-    Move * current;
-    for(int i = 0; i < self.moveList.count; i++) {
-        current = (Move *) self.moveList[i];
-        if(current.isActive && current.finishStatus > n) {
-            n = current.finishStatus;
-        }
-    }
-        
-    NSMutableArray * highestMoves = [[NSMutableArray alloc] init];
-    for(int i = 0; i < self.moveList.count; i++) {
-        current = (Move *) self.moveList[i];
-        if(current.isActive && current.finishStatus == n)
-            [highestMoves addObject: current];
-    }
-    current = [self randomMove: highestMoves];
-    return current;
-}
 
--(Move *) getPreviousMoveHelper: (Move *) old {
-    NSMutableArray * temp_move_list = [[NSMutableArray alloc] init];
-    NSMutableArray * activeMoveList = [self getActiveMoveList];
-    WeightObject * obj;
-    int highestScore = 0;
-    for(int i = 0; i < activeMoveList.count; i++) {
-        obj = [[WeightObject alloc] init: 1 : (Move *) activeMoveList[i]];
-        //check for repeating move
-        if(old == obj.move)
-            obj.weight -= 1;
-        
-        //check matching stance
-        if(old.take_off_stance == obj.move.landing_stance)
-            obj.weight += 3;
-            
-        //check compatible stances
-        switch(old.take_off_stance) {
-            case 1: //old move ends in 1
-                if(obj.move.landing_stance == 4)//forward tricks are compatable
-                    obj.weight += 2;
-                break;
-            case 2: //old move ends in 1
-                if(obj.move.landing_stance == 3)//forward tricks are compatable
-                    obj.weight += 2;
-                break;
-            case 3: //old move ends in 1
-                if(obj.move.landing_stance == 1)//forward tricks are compatable
-                    obj.weight += 3;
-                break;
-            case 4: //old move ends in 1
-                if(obj.move.landing_stance == 2)//forward tricks are compatable
-                    obj.weight += 2;
-                break;
-        }
-        
-        //check swing compatability
-        if(old.take_off_swing && obj.move.landing_can_swing) {
-            obj.weight += 3;
-        } else if (!old.take_off_swing && !obj.move.landing_can_swing) {
-            obj.weight += 3;
-        }
-        
-        //adds the move to moveList
-        [temp_move_list addObject:obj];
-        
-        if(obj.weight > highestScore)
-            highestScore = obj.weight;
-    }
-    
-    //select move
-    NSMutableArray * highestMoves = [[NSMutableArray alloc] init];
-    WeightObject * n;
-    //add heighest weighted moves
-    for(int i = 0; i < temp_move_list.count; i++) {
-        n = (WeightObject *) temp_move_list[i];
-        if(n.weight == highestScore)
-            [highestMoves addObject: n.move];
-    }
-    //add second heighest weighted moves for variance
-    int variance = 0;
-    for(int i = 0; i < temp_move_list.count; i++) {
-        n = (WeightObject *) temp_move_list[i];
-        if(n.weight >= highestScore - variance)
-            [highestMoves addObject: n.move];
-    }
-        
-    return [self randomMove: highestMoves];
-}
 
--(Move *) getStartingMoveHelper: (Move *) old {
-    //calculates lowest finishing move status (for structured last move generation)
-    NSInteger lowestFinishStatus = 2;
-    
-    Move * current;
-    for(int i = 0; i < self.moveList.count; i++) {
-        current = (Move *) self.moveList[i];
-        if(current.finishStatus < lowestFinishStatus) {
-            lowestFinishStatus = current.finishStatus;
-        }
-    }
-
-    //start of shit
-    NSMutableArray * temp_move_list = [[NSMutableArray alloc] init];
-    NSMutableArray * activeMoveList = [self getActiveMoveList];
-    WeightObject * obj;
-    int highestScore = 0;
-    for(int i = 0; i < activeMoveList.count; i++) {
-        obj = [[WeightObject alloc] init: 1 : (Move *) activeMoveList[i]];
-        //check for repeating move
-        if(old == obj.move)
-            obj.weight -= 1;
-        
-        //check matching stance
-        if(old.take_off_stance == obj.move.landing_stance)
-            obj.weight += 3;
-            
-        //check compatible stances
-        switch(old.take_off_stance) {
-            case 1: //old move ends in 1
-                if(obj.move.landing_stance == 4)//forward tricks are compatable
-                    obj.weight += 2;
-                break;
-            case 2: //old move ends in 1
-                if(obj.move.landing_stance == 3)//forward tricks are compatable
-                    obj.weight += 2;
-                break;
-            case 3: //old move ends in 1
-                if(obj.move.landing_stance == 1)//forward tricks are compatable
-                    obj.weight += 3;
-                break;
-            case 4: //old move ends in 1
-                if(obj.move.landing_stance == 2)//forward tricks are compatable
-                    obj.weight += 2;
-                break;
-        }
-        
-        //check swing compatability
-        if(old.take_off_swing && obj.move.landing_can_swing) {
-            obj.weight += 3;
-        } else if (!old.take_off_swing && !obj.move.landing_can_swing) {
-            obj.weight += 3;
-        }
-        
-        //adds the move to moveList
-        if(obj.move.finishStatus == lowestFinishStatus) {
-           [temp_move_list addObject:obj];
-            
-            if(obj.weight > highestScore)
-                highestScore = obj.weight;
-        }
-    }
-    
-    //select move
-    NSMutableArray * highestMoves = [[NSMutableArray alloc] init];
-    WeightObject * n;
-    //add heighest weighted moves
-    for(int i = 0; i < temp_move_list.count; i++) {
-        n = (WeightObject *) temp_move_list[i];
-        if(n.weight == highestScore)
-            [highestMoves addObject: n.move];
-    }
-        
-    return [self randomMove: highestMoves];
-}
-
-//------------------------------------------------------Creative Generation----------------------------------------
+//-----------------------Creative Generation------------------------------
 
 -(NSMutableArray *)generateCreative: (int) size {
     NSMutableArray * rv = [[NSMutableArray alloc] init];
@@ -249,14 +74,16 @@
     [rv addObject: current];
     
     for(int i = 0; i < size - 1; i++) {
-        current = [self getNextMoveHelper: current];
+        current = [self randomMove: [self getNextMoveListHelper: current] ];
         [rv addObject: current];
     }
     [self printMoveArray: rv];
     return rv;
 }
 
--(Move *) getNextMoveHelper: (Move *) old {
+//----------------------HELPER GENERATION METHODS-------------------------
+
+-(NSArray *) getNextMoveListHelper: (Move *) old {
     NSMutableArray * temp_move_list = [[NSMutableArray alloc] init];
     NSMutableArray * activeMoveList = [self getActiveMoveList];
     WeightObject * obj;
@@ -322,14 +149,76 @@
             [highestMoves addObject: n.move];
     }
         
-    return [self randomMove: highestMoves];
+    return highestMoves;
 }
 
-
-
--(Move *) randomMove: (NSMutableArray *) array {
-    int r = arc4random_uniform(array.count);
-    return (Move *) array[r];
+-(NSArray *) getPreviousMoveListHelper: (Move *) old {
+    NSMutableArray * temp_move_list = [[NSMutableArray alloc] init];
+    NSMutableArray * activeMoveList = [self getActiveMoveList];
+    WeightObject * obj;
+    int highestScore = 0;
+    for(int i = 0; i < activeMoveList.count; i++) {
+        obj = [[WeightObject alloc] init: 1 : (Move *) activeMoveList[i]];
+        //check for repeating move
+        if(old == obj.move)
+            obj.weight -= 1;
+        
+        //check matching stance
+        if(old.take_off_stance == obj.move.landing_stance)
+            obj.weight += 3;
+            
+        //check compatible stances
+        switch(old.take_off_stance) {
+            case 1: //old move ends in 1
+                if(obj.move.landing_stance == 4)//forward tricks are compatable
+                    obj.weight += 2;
+                break;
+            case 2: //old move ends in 1
+                if(obj.move.landing_stance == 3)//forward tricks are compatable
+                    obj.weight += 2;
+                break;
+            case 3: //old move ends in 1
+                if(obj.move.landing_stance == 1)//forward tricks are compatable
+                    obj.weight += 3;
+                break;
+            case 4: //old move ends in 1
+                if(obj.move.landing_stance == 2)//forward tricks are compatable
+                    obj.weight += 2;
+                break;
+        }
+        
+        //check swing compatability
+        if(old.take_off_swing && obj.move.landing_can_swing) {
+            obj.weight += 3;
+        } else if (!old.take_off_swing && !obj.move.landing_can_swing) {
+            obj.weight += 3;
+        }
+        
+        //adds the move to moveList
+        [temp_move_list addObject:obj];
+        
+        if(obj.weight > highestScore)
+            highestScore = obj.weight;
+    }
+    
+    //select move
+    NSMutableArray * highestMoves = [[NSMutableArray alloc] init];
+    WeightObject * n;
+    //add heighest weighted moves
+    for(int i = 0; i < temp_move_list.count; i++) {
+        n = (WeightObject *) temp_move_list[i];
+        if(n.weight == highestScore)
+            [highestMoves addObject: n.move];
+    }
+    //add second heighest weighted moves for variance
+    int variance = 0;
+    for(int i = 0; i < temp_move_list.count; i++) {
+        n = (WeightObject *) temp_move_list[i];
+        if(n.weight >= highestScore - variance)
+            [highestMoves addObject: n.move];
+    }
+        
+    return highestMoves;
 }
 
 -(NSMutableArray *) getActiveMoveList {
@@ -351,6 +240,11 @@
         NSLog(@"%@", [current name]);
     }
     NSLog(@"--------------------------");
+}
+
+-(Move *) randomMove: (NSMutableArray *) array {
+    int r = arc4random_uniform(array.count);
+    return (Move *) array[r];
 }
 
 @end
