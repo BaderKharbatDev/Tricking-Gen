@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Moves/MoveManager.h"
+#import "../Moves/MoveManager.h"
 #import "AppDelegate.h"
 
 @interface CreativeViewController : UIViewController

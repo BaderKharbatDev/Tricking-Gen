@@ -27,16 +27,12 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc;
     if(sender == self.creativeButton) {
-//        vc = (UIViewController *)[storyboard instantiateViewControllerWithIdentifier:@"creative"];
         [self.tabBarController setSelectedIndex: 1];
     } else if (sender == self.structuredButton) {
-//        vc = (UIViewController *)[storyboard instantiateViewControllerWithIdentifier:@"structured"];
         [self.tabBarController setSelectedIndex: 2];
     } else if (sender == self.singleButton) {
-//        vc = (UIViewController *)[storyboard instantiateViewControllerWithIdentifier:@"single"];
         [self.tabBarController setSelectedIndex: 3];
     } else {
-//        vc = (UIViewController *)[storyboard instantiateViewControllerWithIdentifier:@"filter"];
         [self.tabBarController setSelectedIndex: 4];
     }
     [self.navigationController pushViewController: vc animated: TRUE];

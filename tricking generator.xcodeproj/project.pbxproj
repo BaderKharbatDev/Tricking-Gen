@@ -51,6 +51,7 @@
 		1EC59DDE24E49D9C003F4D78 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EC59DC324E49D9C003F4D78 /* logo.png */; };
 		1EC59DDF24E49D9C003F4D78 /* DragoWFinal.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EC59DC424E49D9C003F4D78 /* DragoWFinal.png */; };
 		1EC59DE024E49D9C003F4D78 /* fontlogoblack.png in Resources */ = {isa = PBXBuildFile; fileRef = 1EC59DC524E49D9C003F4D78 /* fontlogoblack.png */; };
+		1ECD5B37251D923500E94BBA /* StructuredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECD5B36251D923500E94BBA /* StructuredView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,8 @@
 		1EC59DC424E49D9C003F4D78 /* DragoWFinal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DragoWFinal.png; sourceTree = "<group>"; };
 		1EC59DC524E49D9C003F4D78 /* fontlogoblack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fontlogoblack.png; sourceTree = "<group>"; };
 		1EC59DE524E5DCC0003F4D78 /* tricking generator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "tricking generator-Bridging-Header.h"; sourceTree = "<group>"; };
+		1ECD5B33251D91F700E94BBA /* StructuredView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StructuredView.h; sourceTree = "<group>"; };
+		1ECD5B36251D923500E94BBA /* StructuredView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StructuredView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,7 @@
 		1E5004DF24DB090C006C23A6 /* tricking generator */ = {
 			isa = PBXGroup;
 			children = (
+				1ECD5B32251D91C500E94BBA /* Views */,
 				1EC59DAA24E49D8A003F4D78 /* Images */,
 				1EC59D9D24E49A0D003F4D78 /* Filter Objects */,
 				1E5004FF24DB0CA0006C23A6 /* Moves */,
@@ -153,17 +157,11 @@
 				1E5004E124DB090C006C23A6 /* AppDelegate.m */,
 				1E5004E324DB090C006C23A6 /* SceneDelegate.h */,
 				1E5004E424DB090C006C23A6 /* SceneDelegate.m */,
-				1E5004E624DB090C006C23A6 /* CreativeView.h */,
-				1E5004E724DB090C006C23A6 /* CreativeView.m */,
-				1E5004E924DB090C006C23A6 /* FilterView.h */,
-				1E5004EA24DB090C006C23A6 /* FilterView.m */,
 				1E5004EC24DB090C006C23A6 /* Main.storyboard */,
 				1E5004F224DB090C006C23A6 /* Assets.xcassets */,
 				1E5004F424DB090C006C23A6 /* LaunchScreen.storyboard */,
 				1E5004F724DB090C006C23A6 /* Info.plist */,
 				1E5004F824DB090C006C23A6 /* main.m */,
-				1E13FCAC250C410800F3B7E8 /* HomeViewController.m */,
-				1E13FCAE250C412300F3B7E8 /* HomeViewController.h */,
 			);
 			path = "tricking generator";
 			sourceTree = "<group>";
@@ -229,6 +227,21 @@
 				1EC59DBC24E49D9B003F4D78 /* whistle.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		1ECD5B32251D91C500E94BBA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1E13FCAC250C410800F3B7E8 /* HomeViewController.m */,
+				1E13FCAE250C412300F3B7E8 /* HomeViewController.h */,
+				1E5004E624DB090C006C23A6 /* CreativeView.h */,
+				1E5004E724DB090C006C23A6 /* CreativeView.m */,
+				1E5004E924DB090C006C23A6 /* FilterView.h */,
+				1E5004EA24DB090C006C23A6 /* FilterView.m */,
+				1ECD5B33251D91F700E94BBA /* StructuredView.h */,
+				1ECD5B36251D923500E94BBA /* StructuredView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +348,7 @@
 				1EC59DA924E49A17003F4D78 /* MoveCell.m in Sources */,
 				1E5004E224DB090C006C23A6 /* AppDelegate.m in Sources */,
 				1E2CEC6624E1D75800ADDF0A /* WeightObject.m in Sources */,
+				1ECD5B37251D923500E94BBA /* StructuredView.m in Sources */,
 				1EC59DA824E49A17003F4D78 /* HeaderCell.m in Sources */,
 				1EC59DA624E49A17003F4D78 /* CellMenuItem.m in Sources */,
 				1E1F0DE924DB90B20059FC9F /* MoveManager.m in Sources */,

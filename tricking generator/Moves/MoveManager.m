@@ -58,8 +58,63 @@
     return self;
 }
 //-----------------------Structured Generation-----------------------------
--(NSMutableArray *)generateStructured: (int) size {
+-(NSMutableArray *)generateStructured: (int) size : (int) difficulty {
+    int n = size;
+    int p;
+    switch (difficulty) {
+        case 1:
+            p = 2 * n;
+            break;
+        case 2:
+            p = 3 * n;
+            break;
+        case 3:
+            p = 4 * n;
+            break;
+    }
     NSMutableArray * rv = [[NSMutableArray alloc] init];
+    
+    //get ending move (must have weight of p/2 where p is 2n, 3n, or 4n depending on difficulty
+    int max_move_weight = p/2;
+    NSArray * activeMoves = [self getActiveMoveList];
+    NSMutableArray * iterate_one = [[NSMutableArray alloc] init];
+    int highest_valid_weight = 1;
+    for(Move * m in activeMoves) {
+        if(m.finishStatus <= max_move_weight) {
+            if(m.finishStatus > highest_valid_weight) {
+                [iterate_one removeAllObjects];
+                highest_valid_weight = m.finishStatus;
+            }
+            [iterate_one addObject:m];
+        }
+    }
+    
+    Move * current = [self randomMove: iterate_one];
+    [rv addObject:current];
+    NSLog(@"Last Object: %@", current.name);
+    max_move_weight = p - current.finishStatus;
+    
+    //For each n left, choose a move that ensures the remaining spots still have at least 1 unit
+    for(int i = size - 1; i > 0; i--) {
+        NSMutableArray * available = [self getPreviousMoveListHelper: current];
+        for(int i = 0; i < available.count; i++) { //weed out moves that weigh too high
+            Move * m = available[i];
+            if(max_move_weight - m.finishStatus < (size - 1)) { //each move must make p >= n left
+                [available removeObjectAtIndex:i];
+                i--;
+            }
+        }
+        
+        //add it
+        current = [self randomMove: available];
+        [rv insertObject: current atIndex:0];
+        
+        //recalc max weight
+        max_move_weight = max_move_weight - current.finishStatus;
+    }
+    
+    [self printMoveArray: rv];
+    
     return rv;
 }
 
