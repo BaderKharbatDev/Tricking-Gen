@@ -85,28 +85,34 @@
                 [iterate_one removeAllObjects];
                 highest_valid_weight = m.finishStatus;
             }
-            [iterate_one addObject:m];
+            if(m.finishStatus == highest_valid_weight) {
+                [iterate_one addObject:m];
+            }
         }
     }
     
     Move * current = [self randomMove: iterate_one];
     [rv addObject:current];
-    NSLog(@"Last Object: %@", current.name);
     max_move_weight = p - current.finishStatus;
+    
+    NSLog(@"generated end: %@", current.name);//-------------
     
     //For each n left, choose a move that ensures the remaining spots still have at least 1 unit
     for(int i = size - 1; i > 0; i--) {
         NSMutableArray * available = [self getPreviousMoveListHelper: current];
-        for(int i = 0; i < available.count; i++) { //weed out moves that weigh too high
-            Move * m = available[i];
-            if(max_move_weight - m.finishStatus < (size - 1)) { //each move must make p >= n left
-                [available removeObjectAtIndex:i];
-                i--;
+        for(int n = 0; n < available.count; n++) { //weed out moves that weigh too high
+            Move * m = available[n];
+            int remaining_points = max_move_weight - m.finishStatus;
+            int remaining_spots = i - 1;
+            if(remaining_points < remaining_spots) { //each move must make p >= n left
+                [available removeObjectAtIndex:n];
+                n--;
             }
         }
         
         //add it
         current = [self randomMove: available];
+        NSLog(@"generated: %@", current.name); //----------
         [rv insertObject: current atIndex:0];
         
         //recalc max weight
@@ -155,20 +161,20 @@
             
         //check compatible stances
         switch(old.landing_stance) {
-            case 1: //old move ends in 1
-                if(obj.move.take_off_stance == 3)//forward tricks are compatable
+            case 1: //old move ends in chest forward
+                if(obj.move.take_off_stance == 3)
                     obj.weight += 2;
                 break;
-            case 2: //old move ends in 1
-                if(obj.move.take_off_stance == 4)//forward tricks are compatable
+            case 2: //old move ends in chest back
+                if(obj.move.take_off_stance == 4)
                     obj.weight += 2;
                 break;
-            case 3: //old move ends in 1
-                if(obj.move.take_off_stance == 2)//forward tricks are compatable
+            case 3: //old move ends in forward
+                if(obj.move.take_off_stance == 2)
                     obj.weight += 3;
                 break;
-            case 4: //old move ends in 1
-                if(obj.move.take_off_stance == 1)//forward tricks are compatable
+            case 4: //old move ends in backwads stance
+                if(obj.move.take_off_stance == 1)
                     obj.weight += 2;
                 break;
         }
@@ -196,13 +202,13 @@
         if(n.weight == highestScore)
             [highestMoves addObject: n.move];
     }
-    //add second heighest weighted moves for variance
-    int variance = 0;
-    for(int i = 0; i < temp_move_list.count; i++) {
-        n = (WeightObject *) temp_move_list[i];
-        if(n.weight >= highestScore - variance)
-            [highestMoves addObject: n.move];
-    }
+//    //add second heighest weighted moves for variance
+//    int variance = 0;
+//    for(int i = 0; i < temp_move_list.count; i++) {
+//        n = (WeightObject *) temp_move_list[i];
+//        if(n.weight >= highestScore - variance)
+//            [highestMoves addObject: n.move];
+//    }
         
     return highestMoves;
 }
@@ -265,13 +271,13 @@
         if(n.weight == highestScore)
             [highestMoves addObject: n.move];
     }
-    //add second heighest weighted moves for variance
-    int variance = 0;
-    for(int i = 0; i < temp_move_list.count; i++) {
-        n = (WeightObject *) temp_move_list[i];
-        if(n.weight >= highestScore - variance)
-            [highestMoves addObject: n.move];
-    }
+//    //add second heighest weighted moves for variance
+//    int variance = 0;
+//    for(int i = 0; i < temp_move_list.count; i++) {
+//        n = (WeightObject *) temp_move_list[i];
+//        if(n.weight >= highestScore - variance)
+//            [highestMoves addObject: n.move];
+//    }
         
     return highestMoves;
 }

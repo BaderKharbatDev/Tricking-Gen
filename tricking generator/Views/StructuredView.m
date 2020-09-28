@@ -44,6 +44,7 @@
         _moveArray = [_manager generateStructured: self.countStepper.value : self.segment.selectedSegmentIndex + 1];
         [self.table reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationFade];
     } @catch (NSException *exception) {
+        NSLog(@"%@", exception.reason);
         [self displayWarningWindow];
     }
 }

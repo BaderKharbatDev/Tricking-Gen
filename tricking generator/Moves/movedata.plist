@@ -116,7 +116,7 @@
 			<key>isActive</key>
 			<true/>
 			<key>take_off_stance</key>
-			<integer>4</integer>
+			<integer>1</integer>
 			<key>landing_stance</key>
 			<integer>2</integer>
 			<key>requires_swing</key>
